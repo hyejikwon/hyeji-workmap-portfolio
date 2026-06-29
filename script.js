@@ -4,120 +4,7 @@ if (editAccessEnabled) {
   document.documentElement.classList.add("portfolio-edit-enabled");
 }
 
-const works = {
-  granule: {
-    category: "상세페이지",
-    title: "Tooth Granule (가루치약)",
-    image: "assets/detail_03_toothgranule_kakao.png",
-    alt: "Dencle tooth granule gift detail page",
-    summary: "특허받은 그래뉼 치약의 제형과 무수분·무방부제 제품력을 감각적인 비주얼로 표현한 상세페이지입니다.",
-    product: "덴클 그래뉼치약",
-    concept: "감성적이고 트렌디한 무드 안에서 그래뉼 치약만의 특허 기술과 차별점을 강조",
-    project: "1인 100% (텍스트 제외)",
-    target: "2030 젊은 소비층 / 선물 구매자"
-  },
-  toothbrushGlobal: {
-    category: "상세페이지",
-    title: "Tooth Brush",
-    image: "assets/detail_01_toothbrush.png",
-    alt: "Dencle toothbrush detail page",
-    summary: "차별화된 구조와 특허 기술을 인포그래픽으로 정리한 칫솔 상세페이지입니다.",
-    product: "덴클 잇몸 케어 칫솔",
-    concept: "치과의사와 공동 개발한 특허 디자인 제품으로, 전문성과 구조적 특징을 강조",
-    project: "1인 100% (텍스트 제외)",
-    target: "브랜드 충성 고객 / 프리미엄 제품을 찾는 소비자"
-  },
-  productIntro: {
-    category: "Brand material",
-    title: "Product Introduction Deck",
-    image: "assets/product_intro_spread.jpg",
-    alt: "Product introduction deck",
-    summary: "바이어가 제품군과 핵심 기술을 한눈에 이해할 수 있도록 만든 제품소개서입니다.",
-    purpose: "브랜드와 제품의 강점을 세일즈 자료로 정리",
-    point: "도식화된 정보 구조, 제품 컷, 섹션별 명확한 흐름",
-    role: "Visual design 100% / text excluded"
-  },
-  brochureGranule: {
-    category: "Brand material",
-    title: "Tooth Granule Brochure",
-    image: "assets/brochure_granule.jpg",
-    alt: "Tooth granule brochure",
-    summary: "그래뉼 공법과 컬러체인지 기술을 이해하기 쉽게 정리한 브로슈어입니다.",
-    purpose: "특허 기술의 신뢰성과 제품 차별성을 전달",
-    point: "그린 포인트 컬러, 기술 도식, 넓은 여백 기반 구성",
-    role: "Visual design 100% / text excluded"
-  },
-  summerEvent: {
-    category: "Campaign / SNS",
-    title: "Summer Promotion Page",
-    image: "assets/event_summer.jpg",
-    alt: "Summer event page",
-    summary: "여름 시즌의 시원한 무드와 할인 혜택을 강조한 이벤트 페이지입니다.",
-    purpose: "시즌감 있는 비주얼로 프로모션 참여 유도",
-    point: "블루 톤, 해변 요소, 가격 혜택의 단계적 배치",
-    role: "Visual design 100% / text excluded"
-  },
-  instagramFeed: {
-    category: "Campaign / SNS",
-    title: "Instagram Feed",
-    image: "assets/social_grid_close.jpg",
-    alt: "Instagram feed grid",
-    summary: "위생 제품의 청결함과 신뢰감을 유지한 SNS 피드 디자인입니다.",
-    purpose: "SNS 환경에서 제품 정보와 브랜드 톤을 빠르게 전달",
-    point: "화이트 기반 레이아웃, 제품 컬러 포인트, 짧은 메시지 구성",
-    role: "Visual design 100% / text excluded"
-  },
-  onairDisplay: {
-    category: "Offline",
-    title: "On-air Display",
-    image: "assets/onair_display.jpg",
-    alt: "Home shopping on-air display",
-    summary: "홈쇼핑 방송 환경에 맞춰 제품 배치와 배경 톤을 구성한 디스플레이 작업입니다.",
-    purpose: "방송 화면에서 제품군과 브랜드를 즉시 인지시키기",
-    point: "제품 높낮이, 패키지 컬러, 인증 요소의 시선 배치",
-    role: "Visual direction 70% / draft, print, production"
-  },
-  hostPanel: {
-    category: "Offline",
-    title: "Host Panel",
-    image: "assets/host_panels.jpg",
-    alt: "Home shopping host panels",
-    summary: "쇼호스트가 방송 중 핵심 정보를 빠르게 전달할 수 있도록 만든 핸드 패널입니다.",
-    purpose: "제품 특징, 수치, 혜택을 멀리서도 읽히게 구성",
-    point: "큰 타이포, 강한 대비, 방송용 메시지 우선순위",
-    role: "Visual design 100% / text excluded"
-  },
-  menuBanner: {
-    category: "Offline",
-    title: "Cafe Menu Banner",
-    image: "assets/menu_banner.jpg",
-    alt: "Cafe menu banner",
-    summary: "카페 공간 안에서 메뉴를 자연스럽게 소개하는 배너 디자인입니다.",
-    purpose: "매장 방문객이 메뉴를 편하게 인지하도록 구성",
-    point: "네이비 톤, 제품 컷 정리, 차분한 곡선 포인트",
-    role: "Visual design 100%"
-  },
-  birthdayEvent: {
-    category: "Campaign / SNS",
-    title: "10th Birthday Event",
-    image: "assets/event_birthday.jpg",
-    alt: "10th birthday event page",
-    summary: "브랜드 10주년을 기념하는 프로모션 상세페이지입니다.",
-    purpose: "기존 고객 감사와 신규 유입을 동시에 유도",
-    point: "축하 무드, 혜택 카드, 명확한 CTA 버튼 구조",
-    role: "Visual design 100% / text excluded"
-  },
-  brochureToothbrush: {
-    category: "Brand material",
-    title: "Toothbrush Brochure",
-    image: "assets/brochure_toothbrush.jpg",
-    alt: "Toothbrush brochure",
-    summary: "칫솔 제품군의 구조와 기능 차이를 정리한 브로슈어 디자인입니다.",
-    purpose: "제품 라인업과 기술 차별점을 바이어에게 전달",
-    point: "제품별 비교 구조, 기능 아이콘, 정보 밀도 조절",
-    role: "Visual design 100% / text excluded"
-  }
-};
+const works = {};
 
 const eventFieldLabels = {
   product: "Event Purpose",
@@ -137,7 +24,7 @@ Object.assign(works, {
   toothbrushGlobal: {
     category: "상세페이지",
     title: "Tooth Brush",
-    image: "assets/detail_01_toothbrush.png",
+    image: "assets/detail_01_toothbrush.webp",
     alt: "Dencle toothbrush detail page",
     summary: "기존 칫솔과 차별화된 구조 및 특허 기술을 인포그래픽과 다이어그램으로 정리해, 해외 소비자가 제품의 기능과 양치 효과를 빠르게 이해하도록 구성한 상세페이지입니다.",
     product: "덴클 잇몸 케어 칫솔",
@@ -148,7 +35,7 @@ Object.assign(works, {
   granuleOfficial: {
     category: "상세페이지",
     title: "Tooth Granule (가루치약)",
-    image: "assets/detail_02_toothgranule_official.png",
+    image: "assets/detail_02_toothgranule_official.webp",
     alt: "Dencle tooth granule official detail page",
     summary: "특허받은 그래뉼 치약의 제형과 무수분·무방부제 제품력을 전문적이고 신뢰감 있게 전달하며, 브랜드 공식 홈페이지에 맞춰 풍부한 정보와 긴 호흡의 콘텐츠로 구성한 상세페이지입니다.",
     product: "덴클 그래뉼치약",
@@ -159,7 +46,7 @@ Object.assign(works, {
   granule: {
     category: "상세페이지",
     title: "Tooth Granule (가루치약)",
-    image: "assets/detail_03_toothgranule_kakao.png",
+    image: "assets/detail_03_toothgranule_kakao.webp",
     alt: "Dencle tooth granule gift detail page",
     summary: "특허받은 그래뉼 치약의 제형과 무수분·무방부제 제품력을 감각적인 비주얼로 표현하고, 카카오톡 선물하기 플랫폼에 맞춰 트렌디하면서도 직관적으로 구성한 상세페이지입니다.",
     product: "덴클 그래뉼치약",
@@ -170,7 +57,7 @@ Object.assign(works, {
   connectKinloch: {
     category: "상세페이지",
     title: "브랜드 : 커넥트킨록",
-    image: "assets/detail_04_connect_kinloch.png",
+    image: "assets/detail_04_connect_kinloch.webp",
     alt: "Connect Kinloch menswear detail page",
     summary: "스웨이드 트러커 재킷의 소재감과 실루엣, 레더 디테일을 중심으로 제품의 무드를 강조하고, 착용 컷과 디테일 컷, 사이즈·케어 정보를 온라인 구매 흐름에 맞춰 정리한 남성복 상세페이지입니다.",
     product: "(주)원풍물산 커넥트킨록",
@@ -181,7 +68,7 @@ Object.assign(works, {
   edinburghClub: {
     category: "상세페이지",
     title: "브랜드 : 에든버러클럽",
-    image: "assets/detail_05_edinburgh_club.png",
+    image: "assets/detail_05_edinburgh_club.webp",
     alt: "Edinburgh Club menswear detail page",
     summary: "브리티시 클래식 무드의 니트웨어를 촬영 이미지와 소재 디테일 중심으로 풀어내고, 컬러·사이즈·케어 정보를 차분하게 정리하여 프리미엄 소재감과 브랜드 감성을 전달한 남성복 상세페이지입니다.",
     product: "(주)원풍물산 에든버러클럽",
@@ -192,7 +79,7 @@ Object.assign(works, {
   productIntro: {
     category: "홍보 자료 / 인쇄물",
     title: "치약소개서",
-    image: "assets/print_03_toothgranule_deck.png",
+    image: "assets/print_03_toothgranule_deck.webp",
     alt: "Dencle tooth granule product introduction deck",
     summary: "덴클 그래뉼 치약을 소개하는 제품소개서로, 브랜드 소개에서 특허 기술, 세부 제품군까지 이어지는 정보 흐름을 설계했습니다. 인포그래픽과 아이콘을 활용해 그래뉼 공법과 컬러체인지 기술의 차별점을 직관적으로 보여주고, 처음 접하는 거래처도 제품력을 쉽게 이해하도록 구성했습니다.",
     product: "덴클 가루 치약",
@@ -203,7 +90,7 @@ Object.assign(works, {
   brochureGranule: {
     category: "홍보 자료 / 인쇄물",
     title: "특허기술 브로슈어",
-    image: "assets/print_01_patent_tech_brochure.png",
+    image: "assets/print_01_patent_tech_brochure.webp",
     alt: "Dencle patented technology brochure",
     summary: "덴클의 특허 기술인 그래뉼 공법과 컬러체인지 기술의 차별점을 직관적으로 전달하기 위해 클린하고 모던한 톤을 적용한 브로슈어입니다. 그린 컬러와 인포그래픽을 활용해 기술적 신뢰성과 혁신성을 강조하고, 화이트 기반 섹션 분리로 가독성을 높였습니다.",
     product: "덴클 그래뉼치약",
@@ -214,7 +101,7 @@ Object.assign(works, {
   edinburghCompanyDeck: {
     category: "홍보 자료 / 인쇄물",
     title: "킨록앤더슨 에든버러 회사소개서",
-    image: "assets/print_04_edinburgh_company_deck.png",
+    image: "assets/print_04_edinburgh_company_deck.webp",
     alt: "Kinloch Anderson Edinburgh company introduction deck",
     summary: "킨록앤더슨 에든버러클럽의 브리티시 헤리티지와 클래식한 브랜드 정체성을 전달하기 위해, 아카이브 이미지와 타탄 패턴, 빈티지한 종이 질감을 활용한 회사소개서입니다. 브랜드의 역사와 제품 디테일이 함께 읽히도록 구성해 바이어가 브랜드의 무드와 상품성을 동시에 이해할 수 있도록 설계했습니다.",
     product: "킨록앤더슨 에든버러클럽",
@@ -226,7 +113,7 @@ Object.assign(works, {
   connectKinlochProposal: {
     category: "홍보 자료 / 인쇄물",
     title: "커넥트킨록 회사소개서",
-    image: "assets/print_05_connect_kinloch_proposal.png",
+    image: "assets/print_05_connect_kinloch_proposal.webp",
     alt: "Connect Kinloch company proposal deck",
     summary: "커넥트킨록의 성장 지표, 룩북 이미지, 핵심 상품군, 브랜드 포지셔닝을 한눈에 보여주기 위해 제작한 사업제안서형 회사소개서입니다. 플랫폼 MD와 바이어가 브랜드의 현재 성과와 판매 가능성을 빠르게 판단할 수 있도록 그래프, 룩북, 상품 정보를 명확한 구조로 정리했습니다.",
     product: "커넥트킨록",
@@ -238,7 +125,7 @@ Object.assign(works, {
   summerEvent: {
     category: "프로모션 / 이벤트",
     title: "Summer Promotion Page",
-    image: "assets/event_02_summer_page.png",
+    image: "assets/event_02_summer_page.webp",
     alt: "Summer event page",
     summary: "덴클 여름 프로모션 이벤트 페이지는 수영장 패턴과 모래사장 그래픽을 활용해 계절감을 직관적으로 전달하고, 할인 혜택과 신규 가입 혜택이 단계적으로 읽히도록 구성한 모바일 중심 이벤트 페이지입니다.",
     product: "여름철 특별 혜택 제공을 통해 브랜드 친밀도와 신규 유입을 높이는 프로모션",
@@ -250,7 +137,7 @@ Object.assign(works, {
   summerBanner: {
     category: "프로모션 / 이벤트",
     title: "Summer Promotion Banner",
-    image: "assets/event_03_summer_banner.png",
+    image: "assets/event_03_summer_banner.webp",
     alt: "Edinburgh Club summer promotion official mall banner",
     summary: "에든버러클럽의 차분한 촬영 이미지와 공식몰 UI 흐름을 유지하면서, 여름 시즌 할인 메시지가 메인 화면에서 자연스럽게 보이도록 구성한 빅배너 디자인입니다.",
     product: "공식몰 메인 영역에서 시즌 프로모션과 신상품 유입을 동시에 유도",
@@ -262,7 +149,7 @@ Object.assign(works, {
   seasonOffBanner: {
     category: "프로모션 / 이벤트",
     title: "Season Off Banner",
-    image: "assets/event_04_season_off_banner.png",
+    image: "assets/event_04_season_off_banner.webp",
     alt: "Edinburgh Club season off official mall banner",
     summary: "간절기 무드가 느껴지는 어두운 톤의 룩북 이미지를 중심으로, 시즌오프 세일 메시지가 과하게 튀지 않으면서도 즉시 인지되도록 설계한 공식몰 빅배너입니다.",
     product: "시즌 전환 시점의 세일 주목도와 상품 유입을 높이는 프로모션 배너",
@@ -274,7 +161,7 @@ Object.assign(works, {
   chuseokBigSale: {
     category: "프로모션 / 이벤트",
     title: "Chuseok Big Sale Banner",
-    image: "assets/event_05_chuseok_big_sale.png",
+    image: "assets/event_05_chuseok_big_sale.webp",
     alt: "Kinloch by Kinloch Anderson Chuseok big sale banner",
     summary: "킨록 바이 킨록앤더슨의 안정적인 남성복 이미지를 유지하면서, 추석 시즌의 따뜻한 색감과 낙엽 그래픽을 더해 명절 프로모션임을 직관적으로 전달한 빅세일 배너입니다.",
     product: "추석 시즌 매출 증대와 네이버 스토어 프로모션 유입 강화",
@@ -286,7 +173,7 @@ Object.assign(works, {
   instagramFeed: {
     category: "SNS / 디지털 콘텐츠",
     title: "Instagram Feed",
-    image: "assets/sns_01_dencle_moodboard.png",
+    image: "assets/sns_01_dencle_moodboard.webp",
     alt: "Dencle Instagram feed mood board",
     summary: "화이트 배경을 중심으로 깔끔한 레이아웃을 구성하고, 제품 컬러를 포인트로 사용해 SNS 환경에서도 기능과 인증 정보가 빠르게 전달되도록 정리한 피드 디자인입니다.",
     product: "덴클 칫솔, 혀클리너",
@@ -297,7 +184,7 @@ Object.assign(works, {
   kinlochMoodBoard: {
     category: "SNS / 디지털 콘텐츠",
     title: "Connect Kinloch Mood Board",
-    image: "assets/sns_02_kinloch_moodboard.png",
+    image: "assets/sns_02_kinloch_moodboard.webp",
     alt: "Connect Kinloch Instagram mood board",
     summary: "커넥트킨록의 컨템포러리 캐주얼 무드를 시각적으로 정리하기 위해 그린, 레드, 뉴트럴 톤의 레퍼런스를 조합하고, 룩과 소재감이 함께 보이도록 구성한 인스타그램 무드보드입니다.",
     product: "(주)원풍물산 커넥트킨록",
@@ -308,7 +195,7 @@ Object.assign(works, {
   edinburghCardNews: {
     category: "SNS / 디지털 콘텐츠",
     title: "Winter Office Styling Cards",
-    image: "assets/sns_03_edinburgh_cardnews.png",
+    image: "assets/sns_03_edinburgh_cardnews.webp",
     alt: "Edinburgh Club fashion card news",
     summary: "에든버러클럽의 클래식한 겨울 오피스룩을 셔츠, 니트, 수트 조합 중심으로 풀어내고, 스타일링 팁을 함께 배치해 SNS 안에서도 정보성과 브랜드 무드가 동시에 전달되도록 구성한 카드뉴스입니다.",
     product: "(주)원풍물산 에든버러클럽",
@@ -319,7 +206,7 @@ Object.assign(works, {
   edinburghSaleInfo: {
     category: "SNS / 디지털 콘텐츠",
     title: "Edinburgh Club Sale Picks",
-    image: "assets/sns_04_edinburgh_sale.png",
+    image: "assets/sns_04_edinburgh_sale.webp",
     alt: "Edinburgh Club sale information feed",
     summary: "브랜드의 차분한 촬영 이미지를 유지하면서 제품명, 할인율, 가격 정보를 직접적으로 배치해 SNS 피드 안에서 프로모션 정보를 빠르게 확인할 수 있도록 구성한 할인 정보 콘텐츠입니다.",
     product: "(주)원풍물산 에든버러클럽",
@@ -330,7 +217,7 @@ Object.assign(works, {
   edinburghEventInfo: {
     category: "SNS / 디지털 콘텐츠",
     title: "Musinsa Clearance Sale",
-    image: "assets/sns_05_edinburgh_event.png",
+    image: "assets/sns_05_edinburgh_event.webp",
     alt: "Edinburgh Club Musinsa clearance sale content",
     summary: "무신사 클리어런스 세일 정보를 제품 카드 형태로 정리하고, 메모지와 클립 요소를 활용해 행사성을 더하면서도 에든버러클럽의 클래식한 제품 이미지가 깔끔하게 보이도록 구성한 이벤트 콘텐츠입니다.",
     product: "(주)원풍물산 에든버러클럽",
@@ -341,7 +228,7 @@ Object.assign(works, {
   youtuberPpl: {
     category: "SNS / 디지털 콘텐츠",
     title: "유튜버 콜라보 PPL",
-    image: "assets/sns_06_youtuber_ppl.png",
+    image: "assets/sns_06_youtuber_ppl.webp",
     alt: "Connect Kinloch youtuber collaboration PPL content",
     summary: "유튜버 협업 콘텐츠와 한정 쿠폰 혜택을 함께 구성해 제품 착용 컷과 세일즈 포인트가 SNS 안에서 빠르게 읽히도록 정리한 디지털 콘텐츠입니다.",
     product: "(주)원풍물산 커넥트킨록",
@@ -352,7 +239,7 @@ Object.assign(works, {
   influencerSponsorship: {
     category: "SNS / 디지털 콘텐츠",
     title: "인플루언서 협찬",
-    image: "assets/sns_07_influencer_sponsorship.png",
+    image: "assets/sns_07_influencer_sponsorship.webp",
     alt: "Connect Kinloch influencer sponsorship styling content",
     summary: "인플루언서 착용 이미지를 활용해 실제 코디 흐름과 제품 스타일링 포인트를 보여주는 SNS 콘텐츠입니다. 일상 사진 안에서 아이템의 핏과 무드를 자연스럽게 전달하도록 구성했습니다.",
     product: "(주)원풍물산 커넥트킨록",
@@ -393,7 +280,7 @@ Object.assign(works, {
   birthdayEvent: {
     category: "프로모션 / 이벤트",
     title: "10th Birthday Event Page",
-    image: "assets/event_01_birthday_10th.png",
+    image: "assets/event_01_birthday_10th.webp",
     alt: "10th birthday event page",
     summary: "덴클 10주년을 맞아 브랜드 스토리와 고객 감사 혜택을 모바일 스크롤 흐름에 맞춰 구성한 이벤트 페이지입니다. 럭키박스와 100원딜, 쿠폰 혜택을 그래픽 요소와 명확한 CTA로 연결해 참여 기대감을 높였습니다.",
     product: "브랜드 10주년 기념 및 고객 감사 프로모션",
@@ -405,7 +292,7 @@ Object.assign(works, {
   brochureToothbrush: {
     category: "홍보 자료 / 인쇄물",
     title: "칫솔3종 브로슈어",
-    image: "assets/print_02_toothbrush_brochure.png",
+    image: "assets/print_02_toothbrush_brochure.webp",
     alt: "Dencle three toothbrush line brochure",
     summary: "덴클 칫솔 프리미엄 라인의 기능적 차별성과 구조적 특장점을 전달하기 위해 모노톤 기반의 전문적인 톤앤매너로 구성한 브로슈어입니다. 특허 구조, 항균 테스트, FDA 승인, 수상 이력 등을 함께 배치해 글로벌 시장에서도 제품 신뢰도가 느껴지도록 설계했습니다.",
     product: "덴클 칫솔 프리미엄 라인",
