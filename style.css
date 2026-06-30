@@ -1405,33 +1405,33 @@ body.design-mode .folder-item {
 }
 
 .folder-item[data-folder="event"] {
-  left: 53%;
-  top: 6%;
-  transform: rotate(-3deg);
-}
-
-.folder-item[data-folder="print"] {
   left: 76%;
   top: 21%;
   transform: rotate(4deg);
 }
 
-.folder-item[data-folder="offline"] {
+.folder-item[data-folder="print"] {
   left: 11%;
   top: 58%;
   transform: rotate(3deg);
 }
 
-.folder-item[data-folder="package"] {
+.folder-item[data-folder="offline"] {
   left: 41%;
   top: 60%;
   transform: rotate(-5deg);
 }
 
-.folder-item[data-folder="visual"] {
+.folder-item[data-folder="package"] {
   left: 68%;
   top: 61%;
   transform: rotate(2deg);
+}
+
+.folder-item[data-folder="visual"] {
+  left: 53%;
+  top: 6%;
+  transform: rotate(-3deg);
 }
 
 .folder-item:hover,

@@ -20,6 +20,13 @@ const brandFieldLabels = {
   target: "Target"
 };
 
+const visualFieldLabels = {
+  product: "Tool",
+  concept: "Purpose",
+  project: "Direction",
+  target: "Process"
+};
+
 Object.assign(works, {
   toothbrushGlobal: {
     category: "상세페이지",
@@ -299,6 +306,114 @@ Object.assign(works, {
     concept: "글로벌 바이어를 위한 전문성과 제품력 시각화 / 덴클 전용 특허 칫솔 구조의 직관적 전달",
     project: "1인 100% (텍스트 제외)",
     target: "외국 기업 바이어 / 제품 검토 담당자"
+  },
+  visualAi01: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Soft Editorial Campaign",
+    image: "assets/visual_ai_01.webp",
+    alt: "AI generated soft editorial fashion campaign visual",
+    summary: "화이트 룩과 자연광, 스트라이프 패턴을 조합해 여성 패션 브랜드의 시즌 캠페인 무드를 시각화한 AI 비주얼입니다. 과하게 연출된 광고 이미지보다 일상 속 룩북처럼 보이도록 톤을 정리했습니다.",
+    product: "ChatGPT image generation",
+    concept: "여성 패션 브랜드의 소프트 에디토리얼 캠페인 시안 제작",
+    project: "크림 화이트 스타일링, 자연광, 데일리 럭셔리 무드, 가벼운 빈티지 필름 톤",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi02: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Dreamy Fashion Portrait",
+    image: "assets/visual_ai_02.webp",
+    alt: "AI generated dreamy fashion portrait visual",
+    summary: "레이스와 파스텔 컬러, 실내 플래시 질감을 활용해 뷰티와 패션 사이의 몽환적인 브랜드 이미지를 만든 작업입니다. SNS 티저나 컬렉션 무드보드에 바로 적용할 수 있는 감성 비주얼을 목표로 구성했습니다.",
+    product: "ChatGPT image generation",
+    concept: "패션/뷰티 브랜드의 감성적인 SNS 티저 비주얼 제안",
+    project: "파스텔 블루, 레이스 텍스처, 플래시 스냅, 몽환적이고 페미닌한 톤",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi03: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Pastel Product Styling",
+    image: "assets/visual_ai_03.webp",
+    alt: "AI generated pastel fashion product styling image",
+    summary: "의류와 백, 슈즈를 함께 배치해 패션 브랜드의 상품 스타일링 컷처럼 보이도록 구성한 이미지입니다. 제품의 컬러와 소재감이 부드럽게 이어지도록 파스텔 톤과 여백을 중심으로 디렉팅했습니다.",
+    product: "ChatGPT image generation",
+    concept: "패션 브랜드 상품 큐레이션 및 스타일링 이미지 시안",
+    project: "파스텔 그린/블루, 미니 백, 룩북형 콜라주, 깨끗한 제품 중심 구성",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi04: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Vintage Lookbook Mood",
+    image: "assets/visual_ai_04.webp",
+    alt: "AI generated vintage lookbook fashion visual",
+    summary: "폴라로이드 프레임과 테이프 질감을 활용해 빈티지 룩북 페이지처럼 보이도록 만든 AI 이미지입니다. 단정한 스타일링 안에 레트로한 종이 질감을 더해 브랜드 아카이브 느낌을 강조했습니다.",
+    product: "ChatGPT image generation",
+    concept: "패션 브랜드 룩북 및 아카이브형 비주얼 무드 제안",
+    project: "폴라로이드 프레임, 테이프 디테일, 빈티지 페이퍼, 소프트 페미닌 스타일",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi05: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "City Chic Campaign",
+    image: "assets/visual_ai_05.webp",
+    alt: "AI generated city chic fashion campaign visual",
+    summary: "도시적인 거리 배경과 브라운 백, 선글라스를 중심으로 패션 브랜드의 시크한 데일리 캠페인 컷을 시각화했습니다. 실제 촬영 레퍼런스로 활용할 수 있도록 포즈와 배경의 현실감을 유지했습니다.",
+    product: "ChatGPT image generation",
+    concept: "컨템포러리 여성 패션 브랜드의 도심형 캠페인 시안",
+    project: "브라운 액세서리, 뉴트럴 컬러, 도시 배경, 시크하고 현실적인 스냅 무드",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi06: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Beauty Lifestyle Visual",
+    image: "assets/visual_ai_06.webp",
+    alt: "AI generated beauty lifestyle fashion image",
+    summary: "카페 공간과 아이보리 룩, 미니멀한 백을 조합해 뷰티 브랜드와 패션 브랜드 모두에 어울리는 라이프스타일 이미지를 구성했습니다. 제품을 직접적으로 설명하기보다 브랜드가 지향하는 분위기를 먼저 전달하는 방향으로 잡았습니다.",
+    product: "ChatGPT image generation",
+    concept: "뷰티/패션 브랜드의 라이프스타일 캠페인 무드 시안",
+    project: "아이보리 스타일링, 카페 라이프스타일, 프리미엄 데일리 무드, 차분한 여성 이미지",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi08: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Minimal Menswear Street",
+    image: "assets/visual_ai_08.webp",
+    alt: "AI generated minimal menswear street campaign image",
+    summary: "남성 패션 브랜드를 위한 미니멀 스트리트 무드의 AI 비주얼입니다. 과한 연출보다 자연스러운 보행 컷과 뉴트럴한 도시 배경을 활용해 상세페이지, SNS, 룩북 레퍼런스로 확장 가능한 이미지를 만들었습니다.",
+    product: "Gemini image generation",
+    concept: "남성 패션 브랜드의 미니멀 스트리트 캠페인 시안",
+    project: "그레이 티셔츠, 데님, 파리 거리 배경, 담백한 포즈, 현실적인 룩북 톤",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi09: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Relaxed Menswear Editorial",
+    image: "assets/visual_ai_09.webp",
+    alt: "AI generated relaxed menswear editorial visual",
+    summary: "리넨 셔츠와 와이드 데님을 중심으로 편안하지만 정돈된 남성복 에디토리얼 이미지를 제작했습니다. 플랫폼 상세페이지나 SNS 무드보드에서 브랜드의 여유로운 감도를 전달할 수 있도록 구성했습니다.",
+    product: "Gemini image generation",
+    concept: "남성 캐주얼 브랜드의 릴랙스드 에디토리얼 무드 제안",
+    project: "오픈칼라 셔츠, 와이드 데님, 밝은 건축 배경, 여백 있는 포스터형 구성",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi10: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Avant Casual Styling",
+    image: "assets/visual_ai_10.webp",
+    alt: "AI generated avant casual menswear styling visual",
+    summary: "볼륨감 있는 블랙 상의와 하프 팬츠를 조합해 남성복의 실루엣 실험을 보여주는 AI 스타일링 이미지입니다. 트렌디한 편집숍 감도와 브랜드 룩북의 구조적인 포즈를 함께 담는 방향으로 디렉팅했습니다.",
+    product: "Gemini image generation",
+    concept: "남성 패션 브랜드의 실루엣 중심 스타일링 시안",
+    project: "블랙 볼륨 실루엣, 브라운 하프 팬츠, 부츠 스타일링, 모던 편집숍 무드",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
   }
 });
 
@@ -351,16 +466,32 @@ const currentFolderCount = document.querySelector(".current-folder-count");
 const emptyFolderMessage = document.querySelector(".empty-folder-message");
 const projectIndexWrapper = document.querySelector(".project-index-wrapper");
 
-const categoryTypes = ["detail", "sns", "event", "print", "offline", "package", "visual"];
+const categoryTypes = ["detail", "sns", "visual", "event", "print", "offline", "package"];
 const folderMetadata = {
   detail: { icon: "📄", title: "01 상세페이지", countText: "5 Works" },
   sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "7 Works" },
-  event: { icon: "🎟️", title: "03 프로모션 / 이벤트", countText: "5 Works" },
-  print: { icon: "🧾", title: "04 홍보 자료 / 인쇄물", countText: "5 Works" },
-  offline: { icon: "🧱", title: "05 오프라인 디자인 / VMD", countText: "3 Works" },
-  package: { icon: "📦", title: "06 패키지 / 제품 그래픽", countText: "0 Works" },
-  visual: { icon: "✨", title: "07 비주얼 디렉션 / AI 이미지", countText: "0 Works" }
+  visual: { icon: "✨", title: "03 비주얼 디렉션 / AI 이미지", countText: "9 Works" },
+  event: { icon: "🎟️", title: "04 프로모션 / 이벤트", countText: "5 Works" },
+  print: { icon: "🧾", title: "05 홍보 자료 / 인쇄물", countText: "5 Works" },
+  offline: { icon: "🧱", title: "06 오프라인 디자인 / VMD", countText: "3 Works" },
+  package: { icon: "📦", title: "07 패키지 / 제품 그래픽", countText: "0 Works" }
 };
+
+function syncFolderCounts() {
+  folderItems.forEach((folder) => {
+    const folderId = folder.dataset.folder;
+    if (!folderId || folderId === "all") return;
+
+    const count = document.querySelectorAll(`.work[data-type="${folderId}"]`).length;
+    const countText = `${count} ${count === 1 ? "Work" : "Works"}`;
+    const countEl = folder.querySelector(".folder-count");
+
+    if (countEl) countEl.textContent = countText;
+    if (folderMetadata[folderId]) folderMetadata[folderId].countText = countText;
+  });
+}
+
+syncFolderCounts();
 
 function setFilter(filter) {
   filters.forEach((button) => {
@@ -508,11 +639,11 @@ const cleanDefaultText = {
   introNote: "",
   folderLabel1: "상세페이지",
   folderLabel2: "SNS / 디지털 콘텐츠",
-  folderLabel3: "프로모션 / 이벤트",
-  folderLabel4: "홍보 자료 / 인쇄물",
-  folderLabel5: "오프라인 디자인 / VMD",
-  folderLabel6: "패키지 / 제품 그래픽",
-  folderLabel7: "비주얼 디렉션 / AI 이미지",
+  folderLabel3: "비주얼 디렉션 / AI 이미지",
+  folderLabel4: "프로모션 / 이벤트",
+  folderLabel5: "홍보 자료 / 인쇄물",
+  folderLabel6: "오프라인 디자인 / VMD",
+  folderLabel7: "패키지 / 제품 그래픽",
   exp0Title: "(주) 원풍물산",
   exp0Date: "2025.05.26 - 재직중",
   exp0Text: [
@@ -721,6 +852,21 @@ function getSavedText() {
     ["folderLabel4", "folderLabel5", "folderLabel6", "folderLabel7"].forEach((key) => {
       if (!saved[key]) saved[key] = cleanDefaultText[key];
     });
+    if (saved.categoryOrderVersion !== "2026-06-30-visual-third") {
+      [
+        "folderLabel1",
+        "folderLabel2",
+        "folderLabel3",
+        "folderLabel4",
+        "folderLabel5",
+        "folderLabel6",
+        "folderLabel7"
+      ].forEach((key) => {
+        saved[key] = cleanDefaultText[key];
+      });
+      saved.categoryOrderVersion = "2026-06-30-visual-third";
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+    }
     if (saved.experienceLayoutVersion !== "2026-06-29-experience-accordion-olive-list") {
       saved.exp0Title = cleanDefaultText.exp0Title;
       saved.exp0Date = cleanDefaultText.exp0Date;
@@ -880,11 +1026,11 @@ function renderDynamicEditor() {
     const fields = [
       { label: "카테고리 1 (상세페이지)", key: "folderLabel1", value: document.getElementById("folderLabel1")?.textContent.trim() || "" },
       { label: "카테고리 2 (SNS / 디지털 콘텐츠)", key: "folderLabel2", value: document.getElementById("folderLabel2")?.textContent.trim() || "" },
-      { label: "카테고리 3 (프로모션 / 이벤트)", key: "folderLabel3", value: document.getElementById("folderLabel3")?.textContent.trim() || "" },
-      { label: "카테고리 4 (홍보 자료 / 인쇄물)", key: "folderLabel4", value: document.getElementById("folderLabel4")?.textContent.trim() || "" },
-      { label: "카테고리 5 (오프라인 디자인 / VMD)", key: "folderLabel5", value: document.getElementById("folderLabel5")?.textContent.trim() || "" },
-      { label: "카테고리 6 (패키지 / 제품 그래픽)", key: "folderLabel6", value: document.getElementById("folderLabel6")?.textContent.trim() || "" },
-      { label: "카테고리 7 (비주얼 디렉션 / AI 이미지)", key: "folderLabel7", value: document.getElementById("folderLabel7")?.textContent.trim() || "" }
+      { label: "카테고리 3 (비주얼 디렉션 / AI 이미지)", key: "folderLabel3", value: document.getElementById("folderLabel3")?.textContent.trim() || "" },
+      { label: "카테고리 4 (프로모션 / 이벤트)", key: "folderLabel4", value: document.getElementById("folderLabel4")?.textContent.trim() || "" },
+      { label: "카테고리 5 (홍보 자료 / 인쇄물)", key: "folderLabel5", value: document.getElementById("folderLabel5")?.textContent.trim() || "" },
+      { label: "카테고리 6 (오프라인 디자인 / VMD)", key: "folderLabel6", value: document.getElementById("folderLabel6")?.textContent.trim() || "" },
+      { label: "카테고리 7 (패키지 / 제품 그래픽)", key: "folderLabel7", value: document.getElementById("folderLabel7")?.textContent.trim() || "" }
     ];
 
     fields.forEach(f => {
