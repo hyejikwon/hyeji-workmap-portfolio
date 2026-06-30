@@ -852,7 +852,7 @@ function getSavedText() {
     ["folderLabel4", "folderLabel5", "folderLabel6", "folderLabel7"].forEach((key) => {
       if (!saved[key]) saved[key] = cleanDefaultText[key];
     });
-    if (saved.categoryOrderVersion !== "2026-06-30-visual-third") {
+    if (saved.categoryOrderVersion !== "2026-06-30-visual-third-v2") {
       [
         "folderLabel1",
         "folderLabel2",
@@ -864,7 +864,7 @@ function getSavedText() {
       ].forEach((key) => {
         saved[key] = cleanDefaultText[key];
       });
-      saved.categoryOrderVersion = "2026-06-30-visual-third";
+      saved.categoryOrderVersion = "2026-06-30-visual-third-v2";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.experienceLayoutVersion !== "2026-06-29-experience-accordion-olive-list") {
