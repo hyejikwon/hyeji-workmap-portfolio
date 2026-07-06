@@ -414,6 +414,30 @@ Object.assign(works, {
     project: "블랙 볼륨 실루엣, 브라운 하프 팬츠, 부츠 스타일링, 모던 편집숍 무드",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
+  },
+  visualAi11: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Glass Skin Mask Selfie",
+    image: "assets/visual_ai_11.webp",
+    alt: "AI generated beauty sheet mask selfie visual",
+    summary: "욕실 거울 셀피 구도와 투명한 시트 마스크 질감을 활용해 뷰티 브랜드가 원하는 자연스러운 사용 순간을 시각화한 AI 이미지입니다. 과한 광고 컷보다 실제 SNS 후기처럼 보이는 친근한 분위기로 제품 사용감을 직관적으로 전달하는 데 초점을 맞췄습니다.",
+    product: "ChatGPT image generation",
+    concept: "스킨케어 브랜드의 실제 사용 장면을 강조한 UGC형 뷰티 비주얼 시안",
+    project: "시트 마스크, 욕실 거울 셀피, 글로우 피부 표현, 자연스러운 후기형 콘텐츠 무드",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi12: {
+    category: "비주얼 디렉션 / AI 이미지",
+    title: "Pore Pad Beauty Visual",
+    image: "assets/visual_ai_12.webp",
+    alt: "AI generated beauty pore pad product visual",
+    summary: "레드 패키지의 강한 제품 인지도를 살리면서 모델의 촉촉한 피부 표현과 패드 사용 장면을 함께 구성한 뷰티 브랜드용 AI 비주얼입니다. 제품력과 모델 컷이 동시에 보이도록 정돈된 스튜디오 톤으로 디렉팅했습니다.",
+    product: "ChatGPT image generation",
+    concept: "스킨케어 제품의 패키지 컬러와 사용 컷을 결합한 브랜드 캠페인 시안",
+    project: "레드 패키지, 모공 패드, 클린 스튜디오 조명, 촉촉한 피부 결, 코스메틱 광고 무드",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
   }
 });
 
@@ -466,11 +490,11 @@ const currentFolderCount = document.querySelector(".current-folder-count");
 const emptyFolderMessage = document.querySelector(".empty-folder-message");
 const projectIndexWrapper = document.querySelector(".project-index-wrapper");
 
-const categoryTypes = ["detail", "sns", "visual", "event", "print", "offline", "package"];
+const categoryTypes = ["detail", "sns", "visual", "event", "print"];
 const folderMetadata = {
   detail: { icon: "📄", title: "01 상세페이지", countText: "5 Works" },
   sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "7 Works" },
-  visual: { icon: "✨", title: "03 비주얼 디렉션 / AI 이미지", countText: "9 Works" },
+  visual: { icon: "✨", title: "03 비주얼 디렉션 / AI 이미지", countText: "11 Works" },
   event: { icon: "🎟️", title: "04 프로모션 / 이벤트", countText: "5 Works" },
   print: { icon: "🧾", title: "05 홍보 자료 / 인쇄물", countText: "5 Works" },
   offline: { icon: "🧱", title: "06 오프라인 디자인 / VMD", countText: "3 Works" },
@@ -635,7 +659,7 @@ const cleanDefaultText = {
   heroTitle: "안녕하세요 와인같은 디자이너 권혜지 입니다.",
   heroSubtitle: "Introduction",
   profileText: "1997.09.25 / 8403ss@naver.com / 010.8863.8403",
-  introText: "와인은 오픈 직후부터 중간, 그리고 마지막까지 향과 맛이 변화하며, 한 병을 즐기는 동안 다양한 매력을 선사합니다. 저는 이러한 와인처럼, 마케팅과 디자인을 아우르는 경험을 통해 다채로운 시각과 인사이트를 갖춘 디자이너입니다. 1년 6개월간의 디자인 경력과 이전 마케팅 회사에서의 실무 경험을 바탕으로, 단순히 보기 좋은 디자인을 넘어, 전략적으로 브랜드 가치를 극대화하는 디자인을 만들어낼 수 있습니다. 다양한 경험에서 나오는 통찰력과 유연한 사고를 강점으로, 디자인 이상의 시너지를 만들어가는 디자이너가 되고자 합니다.",
+  introText: "와인은 오픈 직후부터 중간, 그리고 마지막까지 향과 맛이 변화하며, 한 병을 즐기는 동안 다양한 매력을 선사합니다. 저는 이러한 와인처럼, 마케팅과 디자인을 아우르는 경험을 통해 다채로운 시각과 인사이트를 갖춘 디자이너입니다. 약 3년간의 디자인 경력과 이전 마케팅 회사에서의 실무 경험을 바탕으로, 단순히 보기 좋은 디자인을 넘어, 전략적으로 브랜드 가치를 극대화하는 디자인을 만들어낼 수 있습니다. 다양한 경험에서 나오는 통찰력과 유연한 사고를 강점으로, 디자인 이상의 시너지를 만들어가는 디자이너가 되고자 합니다.",
   introNote: "",
   folderLabel1: "상세페이지",
   folderLabel2: "SNS / 디지털 콘텐츠",
@@ -865,6 +889,11 @@ function getSavedText() {
         saved[key] = cleanDefaultText[key];
       });
       saved.categoryOrderVersion = "2026-06-30-visual-third-v2";
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+    }
+    if (saved.introCopyVersion !== "2026-07-06-about-3-years") {
+      saved.introText = cleanDefaultText.introText;
+      saved.introCopyVersion = "2026-07-06-about-3-years";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.experienceLayoutVersion !== "2026-06-29-experience-accordion-olive-list") {

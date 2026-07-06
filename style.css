@@ -769,6 +769,10 @@ dd {
   display: none;
 }
 
+[data-archive-hidden="true"] {
+  display: none !important;
+}
+
 .index-title {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
@@ -1364,7 +1368,7 @@ body.design-mode .design-tools {
 
 .folders-grid {
   position: relative;
-  height: 610px;
+  height: 540px;
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
@@ -1393,45 +1397,45 @@ body.design-mode .folder-item {
 }
 
 .folder-item[data-folder="detail"] {
-  left: 5%;
+  left: 8%;
   top: 8%;
-  transform: rotate(-6deg);
+  --r: -4deg;
 }
 
 .folder-item[data-folder="sns"] {
-  left: 30%;
-  top: 22%;
-  transform: rotate(5deg);
-}
-
-.folder-item[data-folder="event"] {
-  left: 76%;
-  top: 21%;
-  transform: rotate(4deg);
-}
-
-.folder-item[data-folder="print"] {
-  left: 11%;
-  top: 58%;
-  transform: rotate(3deg);
+  left: 38%;
+  top: 12%;
+  --r: 3deg;
 }
 
 .folder-item[data-folder="offline"] {
-  left: 41%;
+  left: 40%;
   top: 60%;
-  transform: rotate(-5deg);
+  --r: -5deg;
 }
 
 .folder-item[data-folder="package"] {
-  left: 68%;
+  left: 73%;
   top: 61%;
-  transform: rotate(2deg);
+  --r: 2deg;
 }
 
 .folder-item[data-folder="visual"] {
+  left: 68%;
+  top: 8%;
+  --r: -3deg;
+}
+
+.folder-item[data-folder="event"] {
+  left: 23%;
+  top: 56%;
+  --r: 4deg;
+}
+
+.folder-item[data-folder="print"] {
   left: 53%;
-  top: 6%;
-  transform: rotate(-3deg);
+  top: 58%;
+  --r: -2deg;
 }
 
 .folder-item:hover,
@@ -1580,7 +1584,7 @@ body.design-mode .folder-item {
 
 .folder-name {
   font-family: Pretendard, "Noto Sans KR", sans-serif;
-  font-size: clamp(14px, 1.05vw, 18px);
+  font-size: clamp(12px, 0.95vw, 16px);
   font-style: normal;
   font-weight: 600; /* 굵기 600 (Semi Bold) 적용 */
   color: var(--folder-text-color, #111111);
@@ -1641,68 +1645,68 @@ body.design-mode .folder-item {
   --folder-color-dark: #bec45f;
   --folder-color-darker: #9ea24d;
   --folder-color-border: rgba(150, 156, 66, 0.32);
-  --folder-text-color: #2458e0;
-  --folder-text-shadow: 0 1px 0px rgba(255, 255, 255, 0.55);
+  --folder-text-color: #10130a;
+  --folder-text-shadow: 0 1px 0px rgba(255, 255, 255, 0.5);
 }
 
 .color-blue {
-  --folder-color: #2458e0;
-  --folder-color-light: #4b78f6;
-  --folder-color-dark: #1946bd;
-  --folder-color-darker: #112f82;
-  --folder-color-border: rgba(27, 68, 184, 0.32);
-  --folder-text-color: #f8f7ef;
-  --folder-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --folder-color: #a7d8ff;
+  --folder-color-light: #d2ecff;
+  --folder-color-dark: #74b8ef;
+  --folder-color-darker: #4383bc;
+  --folder-color-border: rgba(67, 131, 188, 0.34);
+  --folder-text-color: #0d2339;
+  --folder-text-shadow: 0 1px 0px rgba(255, 255, 255, 0.7);
 }
 
 .color-coral {
-  --folder-color: #ff765c;
-  --folder-color-light: #ff9a84;
-  --folder-color-dark: #e15a42;
-  --folder-color-darker: #b94331;
-  --folder-color-border: rgba(192, 69, 47, 0.32);
-  --folder-text-color: #fff8ef;
-  --folder-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  --folder-color: #2d241f;
+  --folder-color-light: #4a3d36;
+  --folder-color-dark: #1f1814;
+  --folder-color-darker: #110c09;
+  --folder-color-border: rgba(17, 12, 9, 0.4);
+  --folder-text-color: #fff2e7;
+  --folder-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.34);
 }
 
 .color-ivory {
-  --folder-color: #ecece6;
-  --folder-color-light: #f8f8f1;
-  --folder-color-dark: #d3d3cd;
-  --folder-color-darker: #b5b5b0;
-  --folder-color-border: rgba(181, 181, 176, 0.32);
-  --folder-text-color: #2458e0;
-  --folder-text-shadow: 0 1px 0px rgba(255, 255, 255, 0.65);
+  --folder-color: #ff7a1a;
+  --folder-color-light: #ffa45c;
+  --folder-color-dark: #dc5d00;
+  --folder-color-darker: #9f4200;
+  --folder-color-border: rgba(159, 66, 0, 0.34);
+  --folder-text-color: #fff8f0;
+  --folder-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
 }
 
 .color-mint {
-  --folder-color: #8fd3b0;
-  --folder-color-light: #b5e5cb;
-  --folder-color-dark: #62b88e;
-  --folder-color-darker: #3f9069;
-  --folder-color-border: rgba(63, 144, 105, 0.32);
-  --folder-text-color: #103b2f;
-  --folder-text-shadow: 0 1px 0px rgba(255, 255, 255, 0.35);
+  --folder-color: #ece8d9;
+  --folder-color-light: #fbf8ee;
+  --folder-color-dark: #d1cab8;
+  --folder-color-darker: #aaa18c;
+  --folder-color-border: rgba(170, 161, 140, 0.34);
+  --folder-text-color: #211d18;
+  --folder-text-shadow: 0 1px 0px rgba(255, 255, 255, 0.65);
 }
 
 .color-lilac {
-  --folder-color: #c7b8ff;
-  --folder-color-light: #ded6ff;
-  --folder-color-dark: #a590ef;
-  --folder-color-darker: #7b69bf;
-  --folder-color-border: rgba(123, 105, 191, 0.32);
-  --folder-text-color: #2a235a;
+  --folder-color: #c8b6ff;
+  --folder-color-light: #e3d9ff;
+  --folder-color-dark: #a88df0;
+  --folder-color-darker: #765cb9;
+  --folder-color-border: rgba(118, 92, 185, 0.32);
+  --folder-text-color: #211948;
   --folder-text-shadow: 0 1px 0px rgba(255, 255, 255, 0.4);
 }
 
 .color-graphite {
-  --folder-color: #30312f;
-  --folder-color-light: #535551;
-  --folder-color-dark: #242523;
-  --folder-color-darker: #151614;
-  --folder-color-border: rgba(21, 22, 20, 0.38);
-  --folder-text-color: #f4f1e8;
-  --folder-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --folder-color: #2e5cff;
+  --folder-color-light: #5f84ff;
+  --folder-color-dark: #1d46d8;
+  --folder-color-darker: #12309b;
+  --folder-color-border: rgba(18, 48, 155, 0.36);
+  --folder-text-color: #f6f8ff;
+  --folder-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
 }
 
 .folder-contents-view {
