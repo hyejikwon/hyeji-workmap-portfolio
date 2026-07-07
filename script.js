@@ -1,4 +1,4 @@
-const editAccessEnabled = new URLSearchParams(window.location.search).get("edit") === "1" || window.location.hash === "#edit";
+﻿const editAccessEnabled = new URLSearchParams(window.location.search).get("edit") === "1" || window.location.hash === "#edit";
 
 if (editAccessEnabled) {
   document.documentElement.classList.add("portfolio-edit-enabled");
@@ -62,15 +62,16 @@ Object.assign(works, {
     target: "2030 젊은 소비층 / 선물 구매자"
   },
   connectKinloch: {
-    category: "상세페이지",
-    title: "브랜드 : 커넥트킨록",
+    category: "패션 브랜드 상세페이지 개선",
+    title: "커넥트킨록",
     image: "assets/detail_04_connect_kinloch.webp",
+    beforeImage: "assets/detail_04_connect_kinloch_before.png",
     alt: "Connect Kinloch menswear detail page",
-    summary: "스웨이드 트러커 재킷의 소재감과 실루엣, 레더 디테일을 중심으로 제품의 무드를 강조하고, 착용 컷과 디테일 컷, 사이즈·케어 정보를 온라인 구매 흐름에 맞춰 정리한 남성복 상세페이지입니다.",
+    summary: "<p class='summary-section'><span class='summary-label'>[기존 문제]</span>분절된 레이아웃으로 인해 제품의 실루엣 인지 및 텍스처 전달력이 낮음. 다소 좁은 여백으로 텍스트 가독성이 떨어짐.</p><p class='summary-section'><span class='summary-label'>[디자인 솔루션]</span>미니멀 톤앤무드 확립, 모델 착용 컷 중심 배치,  재촬영 디테일 컷으로 제품 소재와 착용 컷에 온전히 집중하도록 유도.</p><p class='summary-section'><span class='summary-label'>[결과]</span>유입량 및 판매량이 동기간 대비 가시적으로 증가</p>",
     product: "(주)원풍물산 커넥트킨록",
     concept: "스웨이드와 레더 디테일이 주는 빈티지한 남성미와 실용적인 구조를 강조한 모던 캐주얼 무드",
-    project: "1인 100% (텍스트 제외)",
-    target: "2030 젊은 소비층 / 무신사&29cm 이용 고객"
+    project: "기획 분석 & 레이아웃 리디자인 100%",
+    target: "모바일 가독성을 중요시하며 제품 소재의 본질적 가치를 탐색하는 2030 컨템포러리 남성복 소비자"
   },
   edinburghClub: {
     category: "상세페이지",
@@ -308,135 +309,148 @@ Object.assign(works, {
     target: "외국 기업 바이어 / 제품 검토 담당자"
   },
   visualAi01: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Soft Editorial Campaign",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "Editorial Campaign Direction",
     image: "assets/visual_ai_01.webp",
     alt: "AI generated soft editorial fashion campaign visual",
-    summary: "화이트 룩과 자연광, 스트라이프 패턴을 조합해 여성 패션 브랜드의 시즌 캠페인 무드를 시각화한 AI 비주얼입니다. 과하게 연출된 광고 이미지보다 일상 속 룩북처럼 보이도록 톤을 정리했습니다.",
+    summary: "자연광과 화이트 아웃핏, 스트라이프 패턴의 조화를 통해 클래식한 시즌 캠페인을 연출한 100% AI 생성 비주얼입니다. 억지스러운 연출을 배제하고 인물 중심의 내추럴한 에디토리얼 룩북 감성을 강조했습니다.",
     product: "ChatGPT image generation",
-    concept: "여성 패션 브랜드의 소프트 에디토리얼 캠페인 시안 제작",
-    project: "크림 화이트 스타일링, 자연광, 데일리 럭셔리 무드, 가벼운 빈티지 필름 톤",
+    concept: "시즌 캠페인 에디토리얼 비주얼 제안",
+    project: "크림 화이트 톤, 자연광, 데일리 럭셔리, 빈티지 필름 질감",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
+
   visualAi02: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Dreamy Fashion Portrait",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "Dreamy Portrait Visual",
     image: "assets/visual_ai_02.webp",
     alt: "AI generated dreamy fashion portrait visual",
-    summary: "레이스와 파스텔 컬러, 실내 플래시 질감을 활용해 뷰티와 패션 사이의 몽환적인 브랜드 이미지를 만든 작업입니다. SNS 티저나 컬렉션 무드보드에 바로 적용할 수 있는 감성 비주얼을 목표로 구성했습니다.",
+    summary: "레이스 디테일과 파스텔 코발트 블루, 실내 온카메라 플래시 스냅의 질감을 결합한 100% AI 생성 포트레이트입니다. 페미닌하면서도 몽환적인 무드를 연출하여 브랜드 아카이브 및 SNS 티저 비주얼로 기획했습니다.",
     product: "ChatGPT image generation",
-    concept: "패션/뷰티 브랜드의 감성적인 SNS 티저 비주얼 제안",
-    project: "파스텔 블루, 레이스 텍스처, 플래시 스냅, 몽환적이고 페미닌한 톤",
+    concept: "브랜드 아이덴티티 및 SNS 아카이브 티저 비주얼 제안",
+    project: "파스텔 블루, 레이스 텍스처, 플래시 스냅, 몽환적인 페미닌 무드",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi03: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Pastel Product Styling",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "Pastel Product Moodboard",
     image: "assets/visual_ai_03.webp",
     alt: "AI generated pastel fashion product styling image",
-    summary: "의류와 백, 슈즈를 함께 배치해 패션 브랜드의 상품 스타일링 컷처럼 보이도록 구성한 이미지입니다. 제품의 컬러와 소재감이 부드럽게 이어지도록 파스텔 톤과 여백을 중심으로 디렉팅했습니다.",
+    summary: "의류, 슈즈, 가방을 파스텔 톤의 여백 속에 감각적으로 정돈한 100% AI 생성 스타일링 컷입니다. 제품 간의 조화로운 컬러 매칭과 구조적인 레이아웃 구성을 통해 미니멀한 룩북 무드보드를 시각화했습니다.",
     product: "ChatGPT image generation",
-    concept: "패션 브랜드 상품 큐레이션 및 스타일링 이미지 시안",
-    project: "파스텔 그린/블루, 미니 백, 룩북형 콜라주, 깨끗한 제품 중심 구성",
+    concept: "컬렉션 제품 큐레이션 및 룩북 스타일링 무드보드 시각화",
+    project: "파스텔 그린 & 샌드 베이지, 룩북형 콜라주, 미니멀 레이아웃",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi04: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Vintage Lookbook Mood",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "Vintage Lookbook Direction",
     image: "assets/visual_ai_04.webp",
     alt: "AI generated vintage lookbook fashion visual",
-    summary: "폴라로이드 프레임과 테이프 질감을 활용해 빈티지 룩북 페이지처럼 보이도록 만든 AI 이미지입니다. 단정한 스타일링 안에 레트로한 종이 질감을 더해 브랜드 아카이브 느낌을 강조했습니다.",
+    summary: "폴라로이드 프레임과 테이핑 디테일, 거친 페이퍼 텍스처를 콜라주하여 빈티지 아카이브 룩북을 재현한 100% AI 생성 작업입니다. 클래식하고 단정한 스타일링 위에 아날로그 질감을 덧대어 차별화된 비주얼을 구성했습니다.",
     product: "ChatGPT image generation",
-    concept: "패션 브랜드 룩북 및 아카이브형 비주얼 무드 제안",
-    project: "폴라로이드 프레임, 테이프 디테일, 빈티지 페이퍼, 소프트 페미닌 스타일",
+    concept: "브랜드 아카이브 컬렉션 및 아날로그 룩북 방향성 제안",
+    project: "폴라로이드 콜라주, 테이프 텍스처, 소프트 클래식 스타일",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi05: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "City Chic Campaign",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "City Chic Campaign Visual",
     image: "assets/visual_ai_05.webp",
     alt: "AI generated city chic fashion campaign visual",
-    summary: "도시적인 거리 배경과 브라운 백, 선글라스를 중심으로 패션 브랜드의 시크한 데일리 캠페인 컷을 시각화했습니다. 실제 촬영 레퍼런스로 활용할 수 있도록 포즈와 배경의 현실감을 유지했습니다.",
+    summary: "모던한 도심 속 거리 배경과 시크한 포즈, 선글라스 및 숄더백의 액세서리 매치를 세련되게 담아낸 100% AI 생성 캠페인 비주얼입니다. 현장감 있는 스냅 촬영 톤으로 컨템포러리 브랜드의 룩북 감성을 극대화했습니다.",
     product: "ChatGPT image generation",
-    concept: "컨템포러리 여성 패션 브랜드의 도심형 캠페인 시안",
-    project: "브라운 액세서리, 뉴트럴 컬러, 도시 배경, 시크하고 현실적인 스냅 무드",
+    concept: "컨템포러리 브랜드 도심형 룩북 및 캠페인 비주얼 제안",
+    project: "뉴트럴 톤 아웃핏, 모던 시티 스냅, 브라운 레더 매칭",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi06: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Beauty Lifestyle Visual",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "Beauty Lifestyle Direction",
     image: "assets/visual_ai_06.webp",
     alt: "AI generated beauty lifestyle fashion image",
-    summary: "카페 공간과 아이보리 룩, 미니멀한 백을 조합해 뷰티 브랜드와 패션 브랜드 모두에 어울리는 라이프스타일 이미지를 구성했습니다. 제품을 직접적으로 설명하기보다 브랜드가 지향하는 분위기를 먼저 전달하는 방향으로 잡았습니다.",
+    summary: "차분한 카페 공간과 내추럴한 아이보리 톤 스타일링을 매치해 뷰티·패션 브랜드의 감도 높은 무드를 보여주는 100% AI 생성 라이프스타일 시안입니다. 상업적인 광고 느낌을 덜어내고 감성적인 일상의 순간을 연출했습니다.",
     product: "ChatGPT image generation",
-    concept: "뷰티/패션 브랜드의 라이프스타일 캠페인 무드 시안",
-    project: "아이보리 스타일링, 카페 라이프스타일, 프리미엄 데일리 무드, 차분한 여성 이미지",
+    concept: "감성 라이프스타일 중심의 브랜드 룩북 및 SNS 비주얼 제안",
+    project: "아이보리 & 뉴트럴 컬러, 내추럴 채광, 차분한 데일리 무드",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi08: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Minimal Menswear Street",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "Menswear Street Styling",
     image: "assets/visual_ai_08.webp",
     alt: "AI generated minimal menswear street campaign image",
-    summary: "남성 패션 브랜드를 위한 미니멀 스트리트 무드의 AI 비주얼입니다. 과한 연출보다 자연스러운 보행 컷과 뉴트럴한 도시 배경을 활용해 상세페이지, SNS, 룩북 레퍼런스로 확장 가능한 이미지를 만들었습니다.",
+    summary: "그레이 티셔츠와 데님 매치, 도심 속 보행 실루엣을 포착해 남성 캐주얼의 정석을 표현한 100% AI 생성 비주얼입니다. 자연스러운 파리 거리 배경을 조화시켜 미니멀 룩북과 SNS 소스 등 폭넓은 확장이 가능하도록 설계했습니다.",
     product: "Gemini image generation",
-    concept: "남성 패션 브랜드의 미니멀 스트리트 캠페인 시안",
-    project: "그레이 티셔츠, 데님, 파리 거리 배경, 담백한 포즈, 현실적인 룩북 톤",
+    concept: "남성 캐주얼 브랜드 미니멀 스트리트 룩북 비주얼 제안",
+    project: "미니멀 캐주얼웨어, 유럽 도시 배경, 자연스러운 캔디드 톤",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi09: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Relaxed Menswear Editorial",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "Relaxed Editorial Direction",
     image: "assets/visual_ai_09.webp",
     alt: "AI generated relaxed menswear editorial visual",
-    summary: "리넨 셔츠와 와이드 데님을 중심으로 편안하지만 정돈된 남성복 에디토리얼 이미지를 제작했습니다. 플랫폼 상세페이지나 SNS 무드보드에서 브랜드의 여유로운 감도를 전달할 수 있도록 구성했습니다.",
+    summary: "오픈 칼라 리넨 셔츠와 와이드 데님을 활용하여 자연스럽고 여유로운 정서의 남성 에디토리얼 룩을 연출한 100% AI 생성 작업입니다. 밝고 모던한 건축 미감을 지닌 배경 위에 포스터 레이아웃을 접목하여 세련된 여백을 구성했습니다.",
     product: "Gemini image generation",
-    concept: "남성 캐주얼 브랜드의 릴랙스드 에디토리얼 무드 제안",
-    project: "오픈칼라 셔츠, 와이드 데님, 밝은 건축 배경, 여백 있는 포스터형 구성",
+    concept: "남성 캐주얼 브랜드의 릴랙스드 에디토리얼 룩북 제안",
+    project: "리넨 셔츠 코디, 화이트 아키텍처 배경, 포스터 레이아웃 여백",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi10: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Avant Casual Styling",
+    category: "패션 브랜드 AI 생성 룩북",
+    title: "Avant Casual Styling Study",
     image: "assets/visual_ai_10.webp",
     alt: "AI generated avant casual menswear styling visual",
-    summary: "볼륨감 있는 블랙 상의와 하프 팬츠를 조합해 남성복의 실루엣 실험을 보여주는 AI 스타일링 이미지입니다. 트렌디한 편집숍 감도와 브랜드 룩북의 구조적인 포즈를 함께 담는 방향으로 디렉팅했습니다.",
+    summary: "볼륨감 있는 블랙 슬리브리스와 브라운 하프 턱 팬츠, 레더 부츠 코디를 통해 독창적인 남성 실루엣을 제안하는 100% AI 생성 스타일 시안입니다. 구조적이고 예술적인 룩북 포즈와 트렌디한 편집숍 무드를 정교하게 조합했습니다.",
     product: "Gemini image generation",
-    concept: "남성 패션 브랜드의 실루엣 중심 스타일링 시안",
-    project: "블랙 볼륨 실루엣, 브라운 하프 팬츠, 부츠 스타일링, 모던 편집숍 무드",
+    concept: "아방가르드 무드의 남성 실루엣 스타일링 룩북 제안",
+    project: "아방가르드 실루엣, 브라운 하프 팬츠 & 부츠 매칭, 모던 스튜디오",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi11: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Glass Skin Mask Selfie",
+    category: "생성형 AI 활용 광고 이미지",
+    title: "Beauty UGC Mask Visual",
     image: "assets/visual_ai_11.webp",
     alt: "AI generated beauty sheet mask selfie visual",
-    summary: "욕실 거울 셀피 구도와 투명한 시트 마스크 질감을 활용해 뷰티 브랜드가 원하는 자연스러운 사용 순간을 시각화한 AI 이미지입니다. 과한 광고 컷보다 실제 SNS 후기처럼 보이는 친근한 분위기로 제품 사용감을 직관적으로 전달하는 데 초점을 맞췄습니다.",
+    summary: "투명한 하이드로겔 시트 마스크와 욕실 거울 셀피 구도를 활용하여 소비자의 내추럴한 사용 컷을 시각화한 100% AI 생성 비주얼입니다. 정제된 스튜디오 컷 대신 친근한 후기 무드로 스킨케어 브랜드의 친밀감을 한층 높였습니다.",
     product: "ChatGPT image generation",
-    concept: "스킨케어 브랜드의 실제 사용 장면을 강조한 UGC형 뷰티 비주얼 시안",
-    project: "시트 마스크, 욕실 거울 셀피, 글로우 피부 표현, 자연스러운 후기형 콘텐츠 무드",
+    concept: "스킨케어 브랜드의 친근한 리얼 사용 컷 및 UGC 무드 제안",
+    project: "하이드로겔 마스크 팩, 욕실 셀피 스냅, 내추럴 글로우 스킨",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   },
   visualAi12: {
-    category: "비주얼 디렉션 / AI 이미지",
-    title: "Pore Pad Beauty Visual",
+    category: "생성형 AI 활용 광고 이미지",
+    title: "Pore Pad Campaign Visual",
     image: "assets/visual_ai_12.webp",
     alt: "AI generated beauty pore pad product visual",
-    summary: "레드 패키지의 강한 제품 인지도를 살리면서 모델의 촉촉한 피부 표현과 패드 사용 장면을 함께 구성한 뷰티 브랜드용 AI 비주얼입니다. 제품력과 모델 컷이 동시에 보이도록 정돈된 스튜디오 톤으로 디렉팅했습니다.",
+    summary: "강렬한 토너 패드의 디테일을 부드러운 스킨 텍스처와 함께 매칭한 100% AI 생성 뷰티 캠페인 시안입니다. 세련된 상업 조명 아래 수분감 있는 피부 결을 연출하여 효능과 미감을 세련되게 전달합니다.",
     product: "ChatGPT image generation",
-    concept: "스킨케어 제품의 패키지 컬러와 사용 컷을 결합한 브랜드 캠페인 시안",
-    project: "레드 패키지, 모공 패드, 클린 스튜디오 조명, 촉촉한 피부 결, 코스메틱 광고 무드",
+    concept: "스킨케어 브랜드 제품 패키지 및 텍스처 강조용 캠페인 시안",
+    project: "레드 브랜드 컬러 패키징, 스킨 토너 패드, 맑은 수분 텍스처",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
+    labels: visualFieldLabels
+  },
+  visualAi13: {
+    category: "생성형 AI 활용 광고 이미지",
+    title: "Hydration Ampoule Ad Design",
+    image: "assets/visual_ai_13.webp",
+    alt: "Medipeel hydration ampoule beauty advertisement design using AI generated background",
+    summary: "수분감 넘치는 신비로운 블루 톤의 AI 생성 배경 위에 실물 화장품 앰플의 3D 렌더를 매칭하고 광고 타이포그래피 및 레이아웃을 직접 디자인한 컬래버레이션 광고 안입니다. 브랜드 마케팅 소스나 상세페이지 키 비주얼로 활용 가능합니다. (배경: AI 생성 / 레이아웃 및 텍스트: 디자이너 작업)",
+    product: "ChatGPT image generation + Adobe layout design",
+    concept: "AI 배경 소스와 그래픽 디자인의 융합을 통한 코스메틱 배너 제안",
+    project: "블루 톤 수분 텍스처 배경, 하이알루론산 앰플, 3포인트 마케팅 카피 레이아웃",
+    target: "배경 프롬프트 기획 > 이미지 생성 > 광고 레이아웃 디자인 > 후보정",
     labels: visualFieldLabels
   }
 });
@@ -459,15 +473,53 @@ const workButtons = document.querySelectorAll(".work");
 const indexRows = document.querySelectorAll(".index-row");
 const filters = document.querySelectorAll(".filter");
 
+// Before/After comparison controller
+const beforeAfterTabs = document.getElementById("beforeAfterTabs");
+const btnBefore = document.getElementById("btnBefore");
+const btnAfter = document.getElementById("btnAfter");
+let currentWorkKey = null;
+
+if (btnBefore && btnAfter) {
+  btnBefore.addEventListener("click", () => {
+    if (currentWorkKey && works[currentWorkKey]) {
+      modalImage.src = works[currentWorkKey].beforeImage;
+      btnBefore.classList.add("active");
+      btnAfter.classList.remove("active");
+    }
+  });
+
+  btnAfter.addEventListener("click", () => {
+    if (currentWorkKey && works[currentWorkKey]) {
+      modalImage.src = works[currentWorkKey].image;
+      btnAfter.classList.add("active");
+      btnBefore.classList.remove("active");
+    }
+  });
+}
+
 function openWork(key) {
   const work = works[key];
   if (!work) return;
+
+  currentWorkKey = key;
 
   modalCategory.textContent = work.category;
   modalTitle.textContent = work.title;
   modalImage.src = work.image;
   modalImage.alt = work.alt;
-  modalSummary.textContent = work.summary;
+  modalSummary.innerHTML = work.summary;
+
+  // Show or hide Before/After toggle tabs
+  if (beforeAfterTabs) {
+    if (work.beforeImage) {
+      beforeAfterTabs.style.display = "flex";
+      if (btnAfter) btnAfter.classList.add("active");
+      if (btnBefore) btnBefore.classList.remove("active");
+    } else {
+      beforeAfterTabs.style.display = "none";
+    }
+  }
+
   const labels = work.labels || {};
   if (modalProductLabel) modalProductLabel.textContent = labels.product || "Product";
   if (modalConceptLabel) modalConceptLabel.textContent = labels.concept || "Concept";
@@ -494,7 +546,7 @@ const categoryTypes = ["detail", "sns", "visual", "event", "print"];
 const folderMetadata = {
   detail: { icon: "📄", title: "01 상세페이지", countText: "5 Works" },
   sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "7 Works" },
-  visual: { icon: "✨", title: "03 비주얼 디렉션 / AI 이미지", countText: "11 Works" },
+  visual: { icon: "✨", title: "03 AI 비주얼 활용 룩북 / 광고", countText: "12 Works" },
   event: { icon: "🎟️", title: "04 프로모션 / 이벤트", countText: "5 Works" },
   print: { icon: "🧾", title: "05 홍보 자료 / 인쇄물", countText: "5 Works" },
   offline: { icon: "🧱", title: "06 오프라인 디자인 / VMD", countText: "3 Works" },
@@ -663,7 +715,7 @@ const cleanDefaultText = {
   introNote: "",
   folderLabel1: "상세페이지",
   folderLabel2: "SNS / 디지털 콘텐츠",
-  folderLabel3: "비주얼 디렉션 / AI 이미지",
+  folderLabel3: "AI 비주얼 활용 룩북 / 광고",
   folderLabel4: "프로모션 / 이벤트",
   folderLabel5: "홍보 자료 / 인쇄물",
   folderLabel6: "오프라인 디자인 / VMD",
@@ -876,7 +928,7 @@ function getSavedText() {
     ["folderLabel4", "folderLabel5", "folderLabel6", "folderLabel7"].forEach((key) => {
       if (!saved[key]) saved[key] = cleanDefaultText[key];
     });
-    if (saved.categoryOrderVersion !== "2026-06-30-visual-third-v2") {
+    if (saved.categoryOrderVersion !== "2026-07-07-ai-ad-design-v2") {
       [
         "folderLabel1",
         "folderLabel2",
@@ -888,7 +940,7 @@ function getSavedText() {
       ].forEach((key) => {
         saved[key] = cleanDefaultText[key];
       });
-      saved.categoryOrderVersion = "2026-06-30-visual-third-v2";
+      saved.categoryOrderVersion = "2026-07-07-ai-ad-design-v2";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.introCopyVersion !== "2026-07-06-about-3-years") {
@@ -935,6 +987,13 @@ function getSavedText() {
         if (saved.works?.[key]) delete saved.works[key];
       });
       saved.printContentVersion = "2026-06-29-print-5works";
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+    }
+    if (saved.visualContentVersion !== "2026-07-07-ai-visual-ad-design-v2") {
+      ["visualAi01", "visualAi02", "visualAi03", "visualAi04", "visualAi05", "visualAi06", "visualAi08", "visualAi09", "visualAi10", "visualAi11", "visualAi12", "visualAi13"].forEach((key) => {
+        if (saved.works?.[key]) delete saved.works[key];
+      });
+      saved.visualContentVersion = "2026-07-07-ai-visual-ad-design-v2";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     return saved;
@@ -1055,7 +1114,7 @@ function renderDynamicEditor() {
     const fields = [
       { label: "카테고리 1 (상세페이지)", key: "folderLabel1", value: document.getElementById("folderLabel1")?.textContent.trim() || "" },
       { label: "카테고리 2 (SNS / 디지털 콘텐츠)", key: "folderLabel2", value: document.getElementById("folderLabel2")?.textContent.trim() || "" },
-      { label: "카테고리 3 (비주얼 디렉션 / AI 이미지)", key: "folderLabel3", value: document.getElementById("folderLabel3")?.textContent.trim() || "" },
+      { label: "카테고리 3 (AI 비주얼 활용 룩북 / 광고)", key: "folderLabel3", value: document.getElementById("folderLabel3")?.textContent.trim() || "" },
       { label: "카테고리 4 (프로모션 / 이벤트)", key: "folderLabel4", value: document.getElementById("folderLabel4")?.textContent.trim() || "" },
       { label: "카테고리 5 (홍보 자료 / 인쇄물)", key: "folderLabel5", value: document.getElementById("folderLabel5")?.textContent.trim() || "" },
       { label: "카테고리 6 (오프라인 디자인 / VMD)", key: "folderLabel6", value: document.getElementById("folderLabel6")?.textContent.trim() || "" },
@@ -1434,3 +1493,4 @@ window.requestAnimationFrame(() => {
   currentPageIndex = getNearestPageIndex();
   goToPage(currentPageIndex, "auto");
 });
+
