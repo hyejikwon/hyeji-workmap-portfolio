@@ -446,7 +446,7 @@ Object.assign(works, {
     title: "Hydration Ampoule Ad Design",
     image: "assets/visual_ai_13.jpg",
     alt: "Medipeel hydration ampoule beauty advertisement design using AI generated background",
-    summary: "수분감 넘치는 신비로운 블루 톤의 AI 생성 배경 위에 실물 화장품 앰플의 3D 렌더를 매칭하고 광고 타이포그래피 및 레이아웃을 직접 디자인한 컬래버레이션 광고 안입니다. 브랜드 마케팅 소스나 상세페이지 키 비주얼로 활용 가능합니다. (배경: AI 생성 / 레이아웃 및 텍스트: 디자이너 작업)",
+    summary: "수분감 넘치는 신비로운 블루 톤의 AI 생성 배경 위에 실물 화장품 앰플의 3D 렌더를 매칭하고 광고 타이포그래피 및 레이아웃을 직접 디자인한 배너 시안입니다. 브랜드 마케팅 소스나 상세페이지 키 비주얼로 활용 가능합니다. (배경: AI 생성 / 레이아웃 및 텍스트: 직접 작업)",
     product: "ChatGPT image generation + Adobe layout design",
     concept: "AI 배경 소스와 그래픽 디자인의 융합을 통한 코스메틱 배너 제안",
     project: "블루 톤 수분 텍스처 배경, 하이알루론산 앰플, 3포인트 마케팅 카피 레이아웃",
