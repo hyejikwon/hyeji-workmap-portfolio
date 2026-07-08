@@ -255,6 +255,17 @@ Object.assign(works, {
     project: "1인 100%",
     target: "SNS 이용자 / 실착 스타일링을 참고하는 2030 소비자"
   },
+  pinkHaloTintLaunch: {
+    category: "SNS / 디지털 콘텐츠",
+    title: "Pink Halo Aura Tint Launch",
+    image: "assets/sns_09_pink_halo_tint.png",
+    alt: "Pink Halo Aura Tint new product launch banner",
+    summary: "색조 브랜드 신상품 출시를 가정해 제작한 런칭 배너 및 광고 이미지입니다. 틴트명, 컬러 라인업, 모델 이미지까지 함께 기획해 핑크 톤의 밝고 러블리한 분위기를 만들고, 플랫폼 메인 배너나 SNS 광고에서 신제품의 컬러감을 빠르게 인지할 수 있도록 구성했습니다.",
+    product: "Pink Halo Aura Tint 신상품 출시 배너",
+    concept: "핑크 무드와 글로시한 메이크업 이미지를 중심으로 한 색조 브랜드 런칭 비주얼",
+    project: "틴트명 기획 / 모델 이미지 제작 / 컬러 라인업 구성 / 배너 레이아웃 디자인",
+    target: "신상품 색조 제품을 탐색하는 1020-30 뷰티 소비자 / 뷰티 플랫폼 및 SNS 유저"
+  },
   onairDisplay: {
     category: "Offline",
     title: "On-air Display",
@@ -463,6 +474,18 @@ Object.assign(works, {
     project: "핑크 립 제품, 파스텔 블루 조명, 글로시 스킨, 투명한 색감 중심의 뷰티 캠페인 무드",
     target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
+  },
+  visualAi15: {
+    category: "뷰티",
+    title: "Tint Product Mood Visual",
+    image: "assets/visual_ai_15_muzigae_tint.jpg",
+    alt: "AI reprocessed tint product mood visual based on an existing beauty brand product",
+    summary: "실제 색조 브랜드 제품을 기반으로 AI를 활용해 연출컷을 재가공하고 제작한 제품 무드 비주얼입니다. 투명한 패키지와 핑크 톤의 틴트 제형, 부드러운 조명감을 중심으로 제품의 글로시함과 감성적인 색감을 강조했습니다.",
+    product: "Muzigae Mansion 틴트 제품 무드 비주얼",
+    concept: "실제 브랜드 제품의 패키지 무드를 AI 연출컷으로 재해석한 핑크 톤 뷰티 비주얼",
+    project: "기존 제품 이미지 분석 > AI 연출컷 재가공 및 제작 > 톤 보정",
+    target: "색조 브랜드 캠페인 레퍼런스 / 제품 무드 컷이 필요한 뷰티 마케팅 콘텐츠",
+    labels: visualFieldLabels
   }
 });
 
@@ -556,8 +579,8 @@ const projectIndexWrapper = document.querySelector(".project-index-wrapper");
 const categoryTypes = ["detail", "sns", "visual", "event", "print"];
 const folderMetadata = {
   detail: { icon: "📄", title: "01 상세페이지", countText: "5 Works" },
-  sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "8 Works" },
-  visual: { icon: "✨", title: "03 AI 비주얼 활용 룩북 / 광고", countText: "9 Works" },
+  sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "9 Works" },
+  visual: { icon: "✨", title: "03 AI 비주얼 활용 룩북 / 광고", countText: "10 Works" },
   event: { icon: "🎟️", title: "04 프로모션 / 이벤트", countText: "5 Works" },
   print: { icon: "🧾", title: "05 홍보 자료 / 인쇄물", countText: "5 Works" },
   offline: { icon: "🧱", title: "06 오프라인 디자인 / VMD", countText: "3 Works" },
@@ -979,11 +1002,11 @@ function getSavedText() {
       saved.detailContentVersion = "2026-06-26-detail-5works";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.snsContentVersion !== "2026-07-08-sns-8works-hydration") {
-      ["instagramFeed", "kinlochMoodBoard", "edinburghCardNews", "edinburghSaleInfo", "edinburghEventInfo", "youtuberPpl", "influencerSponsorship", "visualAi13"].forEach((key) => {
+    if (saved.snsContentVersion !== "2026-07-08-sns-9works-pink-halo") {
+      ["instagramFeed", "kinlochMoodBoard", "edinburghCardNews", "edinburghSaleInfo", "edinburghEventInfo", "youtuberPpl", "influencerSponsorship", "visualAi13", "pinkHaloTintLaunch"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.snsContentVersion = "2026-07-08-sns-8works-hydration";
+      saved.snsContentVersion = "2026-07-08-sns-9works-pink-halo";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.eventContentVersion !== "2026-06-29-event-5works") {
@@ -1000,11 +1023,11 @@ function getSavedText() {
       saved.printContentVersion = "2026-06-29-print-5works";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.visualContentVersion !== "2026-07-08-visual-beauty-9works") {
-      ["visualAi01", "visualAi02", "visualAi03", "visualAi04", "visualAi05", "visualAi06", "visualAi08", "visualAi09", "visualAi10", "visualAi11", "visualAi12", "visualAi13", "visualAi14"].forEach((key) => {
+    if (saved.visualContentVersion !== "2026-07-08-visual-beauty-10works-tint") {
+      ["visualAi01", "visualAi02", "visualAi03", "visualAi04", "visualAi05", "visualAi06", "visualAi08", "visualAi09", "visualAi10", "visualAi11", "visualAi12", "visualAi13", "visualAi14", "visualAi15"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.visualContentVersion = "2026-07-08-visual-beauty-9works";
+      saved.visualContentVersion = "2026-07-08-visual-beauty-10works-tint";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     return saved;
