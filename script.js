@@ -442,15 +442,26 @@ Object.assign(works, {
     labels: visualFieldLabels
   },
   visualAi13: {
-    category: "생성형 AI 활용 광고 이미지",
+    category: "SNS / 디지털 콘텐츠",
     title: "Hydration Ampoule Ad Design",
     image: "assets/visual_ai_13.jpg",
     alt: "Medipeel hydration ampoule beauty advertisement design using AI generated background",
-    summary: "수분감 넘치는 신비로운 블루 톤의 AI 생성 배경 위에 실물 화장품 앰플의 3D 렌더를 매칭하고 광고 타이포그래피 및 레이아웃을 직접 디자인한 배너 시안입니다. 브랜드 마케팅 소스나 상세페이지 키 비주얼로 활용 가능합니다. (배경: AI 생성 / 레이아웃 및 텍스트: 직접 작업)",
-    product: "ChatGPT image generation + Adobe layout design",
-    concept: "AI 배경 소스와 그래픽 디자인의 융합을 통한 코스메틱 배너 제안",
-    project: "블루 톤 수분 텍스처 배경, 하이알루론산 앰플, 3포인트 마케팅 카피 레이아웃",
-    target: "배경 프롬프트 기획 > 이미지 생성 > 광고 레이아웃 디자인 > 후보정",
+    summary: "수분감 있는 블루 톤의 AI 생성 배경을 기반으로, 앰플 제품의 효능 키워드와 정보 구조를 직접 배치한 뷰티 디지털 광고 시안입니다. SNS 피드, 브랜드 마케팅 배너, 상세페이지 키 비주얼로 확장할 수 있도록 제품명과 핵심 베네핏이 빠르게 읽히는 구조로 디자인했습니다.",
+    product: "뷰티 앰플 디지털 광고 콘텐츠",
+    concept: "AI 생성 배경을 활용한 수분감 중심의 코스메틱 SNS 배너 디자인",
+    project: "배경 AI 생성 / 제품 정보 구조, 타이포그래피, 레이아웃 직접 작업",
+    target: "뷰티 브랜드 SNS 광고 유저 / 상세페이지 유입 고객"
+  },
+  visualAi14: {
+    category: "뷰티",
+    title: "Color Makeup Campaign Visual",
+    image: "assets/visual_ai_14.png",
+    alt: "ChatGPT generated color makeup brand advertising visual",
+    summary: "색조 브랜드를 가정해 제작한 AI 광고 이미지입니다. 파스텔 블루 배경과 핑크 톤 립 제품, 글로시한 피부 표현을 조합해 맑고 가벼운 메이크업 무드를 강조했습니다. 제품을 든 인물 중심 구도로 SNS 광고, 캠페인 키 비주얼, 상세페이지 상단 이미지로 확장하기 좋은 뷰티 비주얼을 구성했습니다.",
+    product: "ChatGPT image generation",
+    concept: "색조 브랜드의 촉촉하고 청량한 글로우 메이크업 광고 비주얼",
+    project: "핑크 립 제품, 파스텔 블루 조명, 글로시 스킨, 투명한 색감 중심의 뷰티 캠페인 무드",
+    target: "프롬프트 기획 > 이미지 생성 > 후보정",
     labels: visualFieldLabels
   }
 });
@@ -545,8 +556,8 @@ const projectIndexWrapper = document.querySelector(".project-index-wrapper");
 const categoryTypes = ["detail", "sns", "visual", "event", "print"];
 const folderMetadata = {
   detail: { icon: "📄", title: "01 상세페이지", countText: "5 Works" },
-  sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "7 Works" },
-  visual: { icon: "✨", title: "03 AI 비주얼 활용 룩북 / 광고", countText: "12 Works" },
+  sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "8 Works" },
+  visual: { icon: "✨", title: "03 AI 비주얼 활용 룩북 / 광고", countText: "9 Works" },
   event: { icon: "🎟️", title: "04 프로모션 / 이벤트", countText: "5 Works" },
   print: { icon: "🧾", title: "05 홍보 자료 / 인쇄물", countText: "5 Works" },
   offline: { icon: "🧱", title: "06 오프라인 디자인 / VMD", countText: "3 Works" },
@@ -968,11 +979,11 @@ function getSavedText() {
       saved.detailContentVersion = "2026-06-26-detail-5works";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.snsContentVersion !== "2026-06-29-sns-7works") {
-      ["instagramFeed", "kinlochMoodBoard", "edinburghCardNews", "edinburghSaleInfo", "edinburghEventInfo", "youtuberPpl", "influencerSponsorship"].forEach((key) => {
+    if (saved.snsContentVersion !== "2026-07-08-sns-8works-hydration") {
+      ["instagramFeed", "kinlochMoodBoard", "edinburghCardNews", "edinburghSaleInfo", "edinburghEventInfo", "youtuberPpl", "influencerSponsorship", "visualAi13"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.snsContentVersion = "2026-06-29-sns-7works";
+      saved.snsContentVersion = "2026-07-08-sns-8works-hydration";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.eventContentVersion !== "2026-06-29-event-5works") {
@@ -989,11 +1000,11 @@ function getSavedText() {
       saved.printContentVersion = "2026-06-29-print-5works";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.visualContentVersion !== "2026-07-07-ai-visual-ad-design-v2") {
-      ["visualAi01", "visualAi02", "visualAi03", "visualAi04", "visualAi05", "visualAi06", "visualAi08", "visualAi09", "visualAi10", "visualAi11", "visualAi12", "visualAi13"].forEach((key) => {
+    if (saved.visualContentVersion !== "2026-07-08-visual-beauty-9works") {
+      ["visualAi01", "visualAi02", "visualAi03", "visualAi04", "visualAi05", "visualAi06", "visualAi08", "visualAi09", "visualAi10", "visualAi11", "visualAi12", "visualAi13", "visualAi14"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.visualContentVersion = "2026-07-07-ai-visual-ad-design-v2";
+      saved.visualContentVersion = "2026-07-08-visual-beauty-9works";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     return saved;
