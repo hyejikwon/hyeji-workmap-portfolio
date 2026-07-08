@@ -579,7 +579,7 @@ const projectIndexWrapper = document.querySelector(".project-index-wrapper");
 const categoryTypes = ["detail", "sns", "visual", "event", "print"];
 const folderMetadata = {
   detail: { icon: "📄", title: "01 상세페이지", countText: "5 Works" },
-  sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "9 Works" },
+  sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "7 Works" },
   visual: { icon: "✨", title: "03 AI 비주얼 활용 룩북 / 광고", countText: "10 Works" },
   event: { icon: "🎟️", title: "04 프로모션 / 이벤트", countText: "5 Works" },
   print: { icon: "🧾", title: "05 홍보 자료 / 인쇄물", countText: "5 Works" },
@@ -1002,11 +1002,11 @@ function getSavedText() {
       saved.detailContentVersion = "2026-06-26-detail-5works";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.snsContentVersion !== "2026-07-08-sns-9works-pink-halo") {
+    if (saved.snsContentVersion !== "2026-07-08-sns-7works-no-sale-ppl") {
       ["instagramFeed", "kinlochMoodBoard", "edinburghCardNews", "edinburghSaleInfo", "edinburghEventInfo", "youtuberPpl", "influencerSponsorship", "visualAi13", "pinkHaloTintLaunch"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.snsContentVersion = "2026-07-08-sns-9works-pink-halo";
+      saved.snsContentVersion = "2026-07-08-sns-7works-no-sale-ppl";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.eventContentVersion !== "2026-06-29-event-5works") {
