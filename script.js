@@ -956,13 +956,13 @@ function getSavedText() {
     if (saved.folderLabel2 === "캠페인 / SNS") {
       saved.folderLabel2 = cleanDefaultText.folderLabel2;
     }
-    if (saved.folderLabel3 === "브랜드 자료 / 오프라인") {
+    if (saved.folderLabel3 === "브랜드 자료 / 오프라인" || saved.folderLabel3 === "비주얼 디렉션 / AI 이미지") {
       saved.folderLabel3 = cleanDefaultText.folderLabel3;
     }
     ["folderLabel4", "folderLabel5", "folderLabel6", "folderLabel7"].forEach((key) => {
       if (!saved[key]) saved[key] = cleanDefaultText[key];
     });
-    if (saved.categoryOrderVersion !== "2026-07-07-ai-ad-design-v2") {
+    if (saved.categoryOrderVersion !== "2026-07-08-folder-label-sync-v1") {
       [
         "folderLabel1",
         "folderLabel2",
@@ -974,7 +974,7 @@ function getSavedText() {
       ].forEach((key) => {
         saved[key] = cleanDefaultText[key];
       });
-      saved.categoryOrderVersion = "2026-07-07-ai-ad-design-v2";
+      saved.categoryOrderVersion = "2026-07-08-folder-label-sync-v1";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.introCopyVersion !== "2026-07-06-about-3-years") {
