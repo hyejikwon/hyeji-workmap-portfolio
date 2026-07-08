@@ -464,7 +464,7 @@ Object.assign(works, {
     target: "뷰티 브랜드 SNS 광고 유저 / 상세페이지 유입 고객"
   },
   visualAi14: {
-    category: "뷰티",
+    category: "생성형 AI 활용 광고 이미지",
     title: "Color Makeup Campaign Visual",
     image: "assets/visual_ai_14.png",
     alt: "ChatGPT generated color makeup brand advertising visual",
@@ -476,7 +476,7 @@ Object.assign(works, {
     labels: visualFieldLabels
   },
   visualAi15: {
-    category: "뷰티",
+    category: "생성형 AI 활용 광고 이미지",
     title: "Tint Product Mood Visual",
     image: "assets/visual_ai_15_muzigae_tint.jpg",
     alt: "AI reprocessed tint product mood visual based on an existing beauty brand product",
