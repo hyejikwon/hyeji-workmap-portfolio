@@ -158,8 +158,9 @@
           <button class="filter" type="button" data-filter="detail">01 상세페이지</button>
           <button class="filter" type="button" data-filter="sns">02 SNS / 디지털 콘텐츠</button>
           <button class="filter" type="button" data-filter="visual">03 AI 비주얼 활용 룩북 / 광고</button>
-          <button class="filter" type="button" data-filter="event">04 프로모션 / 이벤트</button>
-          <button class="filter" type="button" data-filter="print">05 홍보 자료 / 인쇄물</button>
+          <button class="filter" type="button" data-filter="retouch">04 촬영본 보정 &amp; 리터치</button>
+          <button class="filter" type="button" data-filter="event">05 프로모션 / 이벤트</button>
+          <button class="filter" type="button" data-filter="print">06 홍보 자료 / 인쇄물</button>
           <button class="filter" type="button" data-filter="offline" hidden data-archive-hidden="true">06 오프라인 디자인 / VMD</button>
           <button class="filter" type="button" data-filter="package" hidden data-archive-hidden="true">07 패키지 / 제품 그래픽</button>
         </nav>
@@ -213,11 +214,24 @@
               </div>
             </button>
 
-            <!-- 폴더 4: 프로모션 / 이벤트 -->
-            <button class="folder-item color-mint" type="button" data-folder="event" data-drag="folderEvent">
+            <!-- 폴더 4: 촬영본 보정 & 리터치 -->
+            <button class="folder-item color-retouch" type="button" data-folder="retouch" data-drag="folderRetouch">
               <div class="folder-shape">
                 <div class="folder-paper"></div>
                 <div class="folder-tab"><span>04</span></div>
+                <div class="folder-front">
+                  <span class="folder-icon">✦</span>
+                  <h3 class="folder-name" id="folderLabelRetouch">촬영본 보정 &amp; 리터치</h3>
+                  <span class="folder-count">5 Works</span>
+                </div>
+              </div>
+            </button>
+
+            <!-- 폴더 5: 프로모션 / 이벤트 -->
+            <button class="folder-item color-mint" type="button" data-folder="event" data-drag="folderEvent">
+              <div class="folder-shape">
+                <div class="folder-paper"></div>
+                <div class="folder-tab"><span>05</span></div>
                 <div class="folder-front">
                   <span class="folder-icon">🎟️</span>
                   <h3 class="folder-name" id="folderLabel4">프로모션 / 이벤트</h3>
@@ -226,11 +240,11 @@
               </div>
             </button>
 
-            <!-- 폴더 5: 홍보 자료 / 인쇄물 -->
+            <!-- 폴더 6: 홍보 자료 / 인쇄물 -->
             <button class="folder-item color-ivory" type="button" data-folder="print" data-drag="folderPrint">
               <div class="folder-shape">
                 <div class="folder-paper"></div>
-                <div class="folder-tab"><span>05</span></div>
+                <div class="folder-tab"><span>06</span></div>
                 <div class="folder-front">
                   <span class="folder-icon">🧾</span>
                   <h3 class="folder-name" id="folderLabel5">홍보 자료 / 인쇄물</h3>
@@ -309,6 +323,51 @@
               <img src="assets/detail_05_edinburgh_club.webp" alt="">
               <small class="work-label">Fashion</small>
               <span>05. Edinburgh Club</span>
+            </button>
+
+            <button class="work pin-aq retouch-work" type="button" data-work="portraitRetouch" data-type="retouch">
+              <div class="retouch-card-comparison" style="--retouch-y: -19%;">
+                <div class="retouch-card-shot is-before"><img src="assets/retouch_01_portrait.png" alt=""></div>
+                <span class="retouch-card-arrow" aria-hidden="true">→</span>
+                <div class="retouch-card-shot is-after"><img src="assets/retouch_01_portrait.png" alt=""></div>
+              </div>
+              <span>01. 인물 보정</span>
+            </button>
+
+            <button class="work pin-ar retouch-work" type="button" data-work="portraitRetouch02" data-type="retouch">
+              <div class="retouch-card-comparison" style="--retouch-y: -19%;">
+                <div class="retouch-card-shot is-before"><img src="assets/retouch_02_korean_portrait.png" alt=""></div>
+                <span class="retouch-card-arrow" aria-hidden="true">→</span>
+                <div class="retouch-card-shot is-after"><img src="assets/retouch_02_korean_portrait.png" alt=""></div>
+              </div>
+              <span>02. 인물 보정</span>
+            </button>
+
+            <button class="work pin-as retouch-work" type="button" data-work="portraitRetouch03" data-type="retouch">
+              <div class="retouch-card-comparison" style="--retouch-y: -10.2%;">
+                <div class="retouch-card-shot is-before"><img src="assets/retouch_03_foreign_portrait.png" alt=""></div>
+                <span class="retouch-card-arrow" aria-hidden="true">→</span>
+                <div class="retouch-card-shot is-after"><img src="assets/retouch_03_foreign_portrait.png" alt=""></div>
+              </div>
+              <span>03. 인물 보정</span>
+            </button>
+
+            <button class="work pin-at retouch-work" type="button" data-work="garmentRetouch01" data-type="retouch">
+              <div class="retouch-card-comparison" style="--retouch-y: -19%;">
+                <div class="retouch-card-shot is-before"><img src="assets/retouch_04_beige_pants.png" alt=""></div>
+                <span class="retouch-card-arrow" aria-hidden="true">→</span>
+                <div class="retouch-card-shot is-after"><img src="assets/retouch_04_beige_pants.png" alt=""></div>
+              </div>
+              <span>04. 의상 보정</span>
+            </button>
+
+            <button class="work pin-au retouch-work" type="button" data-work="garmentRetouch02" data-type="retouch">
+              <div class="retouch-card-comparison" style="--retouch-y: -19%;">
+                <div class="retouch-card-shot is-before"><img src="assets/retouch_05_black_pants.png" alt=""></div>
+                <span class="retouch-card-arrow" aria-hidden="true">→</span>
+                <div class="retouch-card-shot is-after"><img src="assets/retouch_05_black_pants.png" alt=""></div>
+              </div>
+              <span>05. 의상 보정</span>
             </button>
 
             <button class="work pin-d" type="button" data-work="brochureGranule" data-type="print">
@@ -495,6 +554,21 @@
           <button type="button" class="ba-tab" id="btnBefore">Before (개선 전)</button>
         </div>
         <img id="modalImage" src="assets/detail_01_toothbrush.webp" alt="">
+        <div class="retouch-comparison" id="retouchComparison" hidden>
+          <div class="retouch-labels" aria-hidden="true">
+            <span>원본</span>
+            <span>보정</span>
+          </div>
+          <div class="retouch-pair">
+            <div class="retouch-shot is-before">
+              <img id="retouchBeforeImage" src="assets/retouch_01_portrait.png" alt="">
+            </div>
+            <span class="retouch-arrow" aria-hidden="true">→</span>
+            <div class="retouch-shot is-after">
+              <img id="retouchAfterImage" src="assets/retouch_01_portrait.png" alt="">
+            </div>
+          </div>
+        </div>
       </figure>
       <section class="modal-copy">
         <p class="eyebrow" id="modalCategory">상세페이지</p>

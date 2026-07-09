@@ -1431,16 +1431,22 @@ body.design-mode .folder-item {
   --r: -3deg;
 }
 
+.folder-item[data-folder="retouch"] {
+  left: 8%;
+  top: 58%;
+  --r: 2deg;
+}
+
 .folder-item[data-folder="event"] {
-  left: 23%;
-  top: 56%;
-  --r: 4deg;
+  left: 38%;
+  top: 58%;
+  --r: -3deg;
 }
 
 .folder-item[data-folder="print"] {
-  left: 53%;
+  left: 68%;
   top: 58%;
-  --r: -2deg;
+  --r: 2deg;
 }
 
 .folder-item:hover,
@@ -1714,6 +1720,16 @@ body.design-mode .folder-item {
   --folder-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
 }
 
+.color-retouch {
+  --folder-color: #d9c8e2;
+  --folder-color-light: #eee5f2;
+  --folder-color-dark: #bca4ca;
+  --folder-color-darker: #8b6d9c;
+  --folder-color-border: rgba(111, 81, 128, 0.3);
+  --folder-text-color: #2b1934;
+  --folder-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
 .folder-contents-view {
   grid-column: span 12;
   width: 100%;
@@ -1886,6 +1902,48 @@ body.design-mode .folder-item {
   display: none; /* 깔끔하게 도트 아이콘 제거 */
 }
 
+.retouch-card-comparison {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  background: #f7f6f2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.retouch-card-shot {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.works-grid-container .retouch-card-shot img,
+.works-grid-container .retouch-work:hover .retouch-card-shot img {
+  display: block;
+  width: 228.6%;
+  height: auto;
+  max-width: none;
+  aspect-ratio: auto;
+  border-radius: 0;
+  transform: translate(-1.875%, var(--retouch-y, -19%)) !important;
+}
+
+.works-grid-container .retouch-card-shot.is-after img,
+.works-grid-container .retouch-work:hover .retouch-card-shot.is-after img {
+  transform: translate(-53.6875%, var(--retouch-y, -19%)) !important;
+}
+
+.retouch-card-arrow {
+  color: var(--ink);
+  font-size: 13px;
+  text-align: center;
+}
+
 /* Crop container styles for images with built-in black borders (works 5 and 6) */
 .work .crop-container {
   width: 100%;
@@ -2042,6 +2100,162 @@ body.design-mode .folder-item {
 
 .modal-image {
   position: relative;
+}
+
+.retouch-comparison {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.retouch-labels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 52px minmax(0, 1fr);
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+}
+
+.retouch-labels span:first-child {
+  grid-column: 1;
+}
+
+.retouch-labels span:last-child {
+  grid-column: 3;
+}
+
+.retouch-pair {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 52px minmax(0, 1fr);
+  align-items: center;
+}
+
+.retouch-shot {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(24, 24, 22, 0.04);
+}
+
+.retouch-shot img {
+  display: block;
+  width: 228.6%;
+  max-width: none;
+  max-height: none;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  transform: translate(-1.875%, var(--retouch-y, -19%));
+}
+
+.retouch-shot.is-after img {
+  transform: translate(-53.6875%, var(--retouch-y, -19%));
+}
+
+.retouch-arrow {
+  color: var(--ink);
+  font-size: 22px;
+  text-align: center;
+}
+
+.modal.is-retouch .modal-layout {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: min(80vh, 760px);
+  min-height: 580px;
+  overflow-y: auto;
+}
+
+.modal.is-retouch .modal-image {
+  display: block;
+  padding: 34px 72px 0;
+  background: var(--panel);
+  border-right: 0;
+  overflow: visible;
+}
+
+.modal.is-retouch #modalImage {
+  display: none !important;
+}
+
+.modal:not(.is-retouch) #retouchComparison {
+  display: none !important;
+}
+
+.modal.is-retouch .modal-copy {
+  width: calc(100% - 144px);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 0 58px;
+  overflow: visible;
+}
+
+.modal.is-retouch .modal-copy .eyebrow {
+  margin-bottom: 4px;
+}
+
+.modal.is-retouch .modal-copy h2 {
+  margin: 0;
+}
+
+.modal.is-retouch #modalSummary {
+  display: none;
+}
+
+.modal.is-retouch .modal-copy dl {
+  display: block;
+  margin-top: 14px;
+  padding-top: 14px;
+}
+
+.modal.is-retouch .modal-copy dl div {
+  display: none;
+}
+
+.modal.is-retouch .modal-copy dl div:first-child {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+}
+
+.modal.is-retouch.has-retouch-detail .modal-copy dl {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  column-gap: 34px;
+}
+
+.modal.is-retouch.has-retouch-detail .modal-copy dl div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+}
+
+@media (max-width: 768px) {
+  .modal.is-retouch .modal-layout {
+    min-height: 0;
+    height: auto;
+  }
+
+  .modal.is-retouch .modal-image {
+    padding: 52px 22px 0;
+  }
+
+  .modal.is-retouch .modal-copy {
+    width: calc(100% - 44px);
+    padding: 8px 0 42px;
+  }
+
+  .modal.is-retouch.has-retouch-detail .modal-copy dl {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  .retouch-labels {
+    font-size: 12px;
+  }
 }
 
 

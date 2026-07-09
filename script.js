@@ -486,6 +486,88 @@ Object.assign(works, {
     project: "기존 제품 이미지 분석 > AI 연출컷 재가공 및 제작 > 톤 보정",
     target: "색조 브랜드 캠페인 레퍼런스 / 제품 무드 컷이 필요한 뷰티 마케팅 콘텐츠",
     labels: visualFieldLabels
+  },
+  portraitRetouch: {
+    category: "촬영본 보정 & 리터치",
+    title: "인물 보정",
+    image: "assets/retouch_01_portrait.png",
+    alt: "인물 촬영 원본과 보정본 비교",
+    summary: "",
+    product: "Adobe Photoshop",
+    concept: "",
+    project: "",
+    target: "",
+    comparisonLayout: true,
+    labels: {
+      product: "Tool"
+    }
+  },
+  portraitRetouch02: {
+    category: "촬영본 보정 & 리터치",
+    title: "인물 보정",
+    image: "assets/retouch_02_korean_portrait.png",
+    alt: "한국인 남성 인물 촬영 원본과 보정본 비교",
+    summary: "",
+    product: "Adobe Photoshop",
+    concept: "",
+    project: "",
+    target: "",
+    comparisonLayout: true,
+    comparisonY: "-19%",
+    labels: {
+      product: "Tool"
+    }
+  },
+  portraitRetouch03: {
+    category: "촬영본 보정 & 리터치",
+    title: "인물 보정",
+    image: "assets/retouch_03_foreign_portrait.png",
+    alt: "외국인 남성 인물 촬영 원본과 보정본 비교",
+    summary: "",
+    product: "Adobe Photoshop",
+    concept: "배경 · 얼굴 · 의상 보정",
+    project: "",
+    target: "",
+    comparisonLayout: true,
+    comparisonY: "-10.2%",
+    labels: {
+      product: "Tool",
+      concept: "Retouch"
+    }
+  },
+  garmentRetouch01: {
+    category: "촬영본 보정 & 리터치",
+    title: "의상 보정",
+    image: "assets/retouch_04_beige_pants.png",
+    alt: "베이지 팬츠 촬영 원본과 주름 보정본 비교",
+    summary: "",
+    product: "Adobe Photoshop",
+    concept: "주름 보정",
+    project: "",
+    target: "",
+    comparisonLayout: true,
+    comparisonY: "-19%",
+    labels: {
+      product: "Tool",
+      concept: "Retouch"
+    }
+  },
+  garmentRetouch02: {
+    category: "촬영본 보정 & 리터치",
+    title: "의상 보정",
+    image: "assets/retouch_05_black_pants.png",
+    alt: "블랙 팬츠 촬영 원본과 주름 보정본 비교",
+    summary: "",
+    product: "Adobe Photoshop",
+    concept: "주름 보정",
+    project: "",
+    target: "",
+    comparisonLayout: true,
+    comparisonY: "-19%",
+    labels: {
+      product: "Tool",
+      concept: "Retouch"
+    }
   }
 });
 
@@ -503,6 +585,9 @@ const modalProductLabel = document.getElementById("modalProductLabel");
 const modalConceptLabel = document.getElementById("modalConceptLabel");
 const modalProjectLabel = document.getElementById("modalProjectLabel");
 const modalTargetLabel = document.getElementById("modalTargetLabel");
+const retouchComparison = document.getElementById("retouchComparison");
+const retouchBeforeImage = document.getElementById("retouchBeforeImage");
+const retouchAfterImage = document.getElementById("retouchAfterImage");
 const workButtons = document.querySelectorAll(".work");
 const indexRows = document.querySelectorAll(".index-row");
 const filters = document.querySelectorAll(".filter");
@@ -536,12 +621,28 @@ function openWork(key) {
   if (!work) return;
 
   currentWorkKey = key;
+  const usesComparisonLayout = Boolean(work.comparisonLayout);
 
   modalCategory.textContent = work.category;
   modalTitle.textContent = work.title;
   modalImage.src = work.image;
   modalImage.alt = work.alt;
   modalSummary.innerHTML = work.summary;
+  modal.classList.toggle("is-retouch", usesComparisonLayout);
+  modalImage.hidden = usesComparisonLayout;
+
+  if (retouchComparison) {
+    retouchComparison.hidden = !usesComparisonLayout;
+  }
+  if (usesComparisonLayout) {
+    retouchComparison.style.setProperty("--retouch-y", work.comparisonY || "-19%");
+    [retouchBeforeImage, retouchAfterImage].forEach((image) => {
+      if (!image) return;
+      image.src = work.image;
+      image.alt = work.alt;
+    });
+  }
+  modal.classList.toggle("has-retouch-detail", usesComparisonLayout && Boolean(work.concept));
 
   // Show or hide Before/After toggle tabs
   if (beforeAfterTabs) {
@@ -576,13 +677,14 @@ const currentFolderCount = document.querySelector(".current-folder-count");
 const emptyFolderMessage = document.querySelector(".empty-folder-message");
 const projectIndexWrapper = document.querySelector(".project-index-wrapper");
 
-const categoryTypes = ["detail", "sns", "visual", "event", "print"];
+const categoryTypes = ["detail", "sns", "visual", "retouch", "event", "print"];
 const folderMetadata = {
   detail: { icon: "📄", title: "01 상세페이지", countText: "5 Works" },
   sns: { icon: "📱", title: "02 SNS / 디지털 콘텐츠", countText: "7 Works" },
   visual: { icon: "✨", title: "03 AI 비주얼 활용 룩북 / 광고", countText: "10 Works" },
-  event: { icon: "🎟️", title: "04 프로모션 / 이벤트", countText: "5 Works" },
-  print: { icon: "🧾", title: "05 홍보 자료 / 인쇄물", countText: "5 Works" },
+  retouch: { icon: "✦", title: "04 촬영본 보정 & 리터치", countText: "5 Works" },
+  event: { icon: "🎟️", title: "05 프로모션 / 이벤트", countText: "5 Works" },
+  print: { icon: "🧾", title: "06 홍보 자료 / 인쇄물", countText: "5 Works" },
   offline: { icon: "🧱", title: "06 오프라인 디자인 / VMD", countText: "3 Works" },
   package: { icon: "📦", title: "07 패키지 / 제품 그래픽", countText: "0 Works" }
 };
@@ -750,6 +852,7 @@ const cleanDefaultText = {
   folderLabel1: "상세페이지",
   folderLabel2: "SNS / 디지털 콘텐츠",
   folderLabel3: "AI 비주얼 활용 룩북 / 광고",
+  folderLabelRetouch: "촬영본 보정 & 리터치",
   folderLabel4: "프로모션 / 이벤트",
   folderLabel5: "홍보 자료 / 인쇄물",
   folderLabel6: "오프라인 디자인 / VMD",
@@ -959,14 +1062,15 @@ function getSavedText() {
     if (saved.folderLabel3 === "브랜드 자료 / 오프라인" || saved.folderLabel3 === "비주얼 디렉션 / AI 이미지") {
       saved.folderLabel3 = cleanDefaultText.folderLabel3;
     }
-    ["folderLabel4", "folderLabel5", "folderLabel6", "folderLabel7"].forEach((key) => {
+    ["folderLabelRetouch", "folderLabel4", "folderLabel5", "folderLabel6", "folderLabel7"].forEach((key) => {
       if (!saved[key]) saved[key] = cleanDefaultText[key];
     });
-    if (saved.categoryOrderVersion !== "2026-07-08-folder-label-sync-v1") {
+    if (saved.categoryOrderVersion !== "2026-07-09-retouch-folder-v1") {
       [
         "folderLabel1",
         "folderLabel2",
         "folderLabel3",
+        "folderLabelRetouch",
         "folderLabel4",
         "folderLabel5",
         "folderLabel6",
@@ -974,7 +1078,7 @@ function getSavedText() {
       ].forEach((key) => {
         saved[key] = cleanDefaultText[key];
       });
-      saved.categoryOrderVersion = "2026-07-08-folder-label-sync-v1";
+      saved.categoryOrderVersion = "2026-07-09-retouch-folder-v1";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.introCopyVersion !== "2026-07-06-about-3-years") {
@@ -1149,8 +1253,9 @@ function renderDynamicEditor() {
       { label: "카테고리 1 (상세페이지)", key: "folderLabel1", value: document.getElementById("folderLabel1")?.textContent.trim() || "" },
       { label: "카테고리 2 (SNS / 디지털 콘텐츠)", key: "folderLabel2", value: document.getElementById("folderLabel2")?.textContent.trim() || "" },
       { label: "카테고리 3 (AI 비주얼 활용 룩북 / 광고)", key: "folderLabel3", value: document.getElementById("folderLabel3")?.textContent.trim() || "" },
-      { label: "카테고리 4 (프로모션 / 이벤트)", key: "folderLabel4", value: document.getElementById("folderLabel4")?.textContent.trim() || "" },
-      { label: "카테고리 5 (홍보 자료 / 인쇄물)", key: "folderLabel5", value: document.getElementById("folderLabel5")?.textContent.trim() || "" },
+      { label: "카테고리 4 (촬영본 보정 & 리터치)", key: "folderLabelRetouch", value: document.getElementById("folderLabelRetouch")?.textContent.trim() || "" },
+      { label: "카테고리 5 (프로모션 / 이벤트)", key: "folderLabel4", value: document.getElementById("folderLabel4")?.textContent.trim() || "" },
+      { label: "카테고리 6 (홍보 자료 / 인쇄물)", key: "folderLabel5", value: document.getElementById("folderLabel5")?.textContent.trim() || "" },
       { label: "카테고리 6 (오프라인 디자인 / VMD)", key: "folderLabel6", value: document.getElementById("folderLabel6")?.textContent.trim() || "" },
       { label: "카테고리 7 (패키지 / 제품 그래픽)", key: "folderLabel7", value: document.getElementById("folderLabel7")?.textContent.trim() || "" }
     ];
