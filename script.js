@@ -27,55 +27,66 @@ const visualFieldLabels = {
   target: "Process"
 };
 
+const caseStudyFieldLabels = {
+  product: "Problem",
+  concept: "Role",
+  project: "Process",
+  target: "Outcome"
+};
+
 Object.assign(works, {
   toothbrushGlobal: {
     category: "상세페이지",
-    title: "Tooth Brush",
+    title: "Global Toothbrush Detail Page",
     image: "assets/detail_01_toothbrush.webp",
     alt: "Dencle toothbrush detail page",
-    summary: "기존 칫솔과 차별화된 구조 및 특허 기술을 인포그래픽과 다이어그램으로 정리해, 해외 소비자가 제품의 기능과 양치 효과를 빠르게 이해하도록 구성한 상세페이지입니다.",
-    product: "덴클 잇몸 케어 칫솔",
-    concept: "치과의사와 공동 개발한 특허 디자인 제품으로, 전문성과 칫솔 고유의 구조적 특징을 강조",
-    project: "1인 100% (텍스트 제외)",
-    target: "브랜드 충성 고객 / 프리미엄 제품을 찾는 소비자"
+    summary: "특허 구조와 제품 기능을 해외 소비자가 빠르게 이해할 수 있도록, 복잡한 기술 정보를 인포그래픽과 다이어그램 중심의 구매 흐름으로 재구성한 글로벌 상세페이지입니다.",
+    product: "특허받은 칫솔 구조와 기능 정보가 복잡해 제품 차별점을 짧은 시간 안에 이해하기 어려움",
+    concept: "정보 구조 설계, 인포그래픽·다이어그램 제작, 상세페이지 비주얼 디자인 100% (텍스트 제외)",
+    project: "핵심 기술 우선순위 정리 > 기능별 시각화 > 글로벌·모바일 가독성 기준으로 섹션 재구성",
+    target: "제품 구조, 사용 효과, 신뢰 근거가 한 흐름으로 연결되어 핵심 차별점을 빠르게 비교·이해할 수 있는 페이지 완성",
+    labels: caseStudyFieldLabels
   },
   granuleOfficial: {
     category: "상세페이지",
-    title: "Tooth Granule (가루치약)",
+    title: "Tooth Granule · Official Store",
     image: "assets/detail_02_toothgranule_official.webp",
     alt: "Dencle tooth granule official detail page",
-    summary: "특허받은 그래뉼 치약의 제형과 무수분·무방부제 제품력을 전문적이고 신뢰감 있게 전달하며, 브랜드 공식 홈페이지에 맞춰 풍부한 정보와 긴 호흡의 콘텐츠로 구성한 상세페이지입니다.",
-    product: "덴클 그래뉼치약",
-    concept: "브랜드 아이덴티티와 전문성, 신뢰감을 바탕으로 그래뉼 치약만의 특허 기술과 차별점을 강조",
-    project: "1인 100% (텍스트 제외)",
-    target: "브랜드 충성 고객 / 프리미엄 제품을 찾는 소비자"
+    summary: "공식몰 고객이 프리미엄 제품의 기술력과 성분을 충분히 검토할 수 있도록, 특허 공법·인증·제품 정보를 긴 호흡의 설득 구조로 설계한 공식 홈페이지용 상세페이지입니다.",
+    product: "고가의 신개념 가루치약을 구매하기 전 제형, 특허 기술, 성분 안정성에 대한 충분한 정보와 신뢰 형성이 필요",
+    concept: "제품 정보 구조, 섹션 설계, 키 비주얼·인포그래픽, 상세페이지 디자인 100% (텍스트 제외)",
+    project: "브랜드 신뢰 형성 > 특허 공법과 성분 정보 확장 > 인증·효능 근거 제시 > 제품 선택 정보로 연결",
+    target: "검색·유입 고객이 제품 이해부터 신뢰 형성, 구매 검토까지 단계적으로 이어갈 수 있는 공식몰용 정보 중심 페이지 완성",
+    labels: caseStudyFieldLabels
   },
   granule: {
     category: "상세페이지",
-    title: "Tooth Granule (가루치약)",
+    title: "Tooth Granule · Kakao Gift",
     image: "assets/detail_03_toothgranule_kakao.webp",
     alt: "Dencle tooth granule gift detail page",
-    summary: "특허받은 그래뉼 치약의 제형과 무수분·무방부제 제품력을 감각적인 비주얼로 표현하고, 카카오톡 선물하기 플랫폼에 맞춰 트렌디하면서도 직관적으로 구성한 상세페이지입니다.",
-    product: "덴클 그래뉼치약",
-    concept: "감성적이고 트렌디한 무드 안에서 그래뉼 치약만의 특허 기술과 차별점을 강조",
-    project: "1인 100% (텍스트 제외)",
-    target: "2030 젊은 소비층 / 선물 구매자"
+    summary: "동일한 그래뉼 치약을 카카오톡 선물하기 고객의 짧은 탐색 흐름에 맞춰 재편한 상세페이지입니다. 공식몰보다 정보량을 줄이고 선물 가치, 패키지, 감성 비주얼을 우선 배치했습니다.",
+    product: "브랜드 사전 지식이 적은 선물 구매자가 짧은 탐색 안에 제품 매력과 선물 가치를 판단해야 함",
+    concept: "플랫폼 특성 분석, 정보 선별, 비주얼 콘셉트·레이아웃, 상세페이지 디자인 100% (텍스트 제외)",
+    project: "공식몰 정보 선별 > 선물 패키지와 감성 이미지 우선 노출 > 모바일 속도에 맞춘 짧고 직관적인 섹션 구성",
+    target: "동일 제품을 플랫폼 맥락에 맞게 감성·패키지·핵심 효능 중심으로 재설계해 선물 구매 흐름에 최적화",
+    labels: caseStudyFieldLabels
   },
   connectKinloch: {
     category: "패션 브랜드 상세페이지 개선",
-    title: "커넥트킨록",
+    title: "Connect Kinloch · Detail Page Renewal",
     image: "assets/detail_04_connect_kinloch.webp",
     beforeImage: "assets/detail_04_connect_kinloch_before.png",
     alt: "Connect Kinloch menswear detail page",
-    summary: "<p class='summary-section'><span class='summary-label'>[기존 문제]</span>분절된 레이아웃으로 인해 제품의 실루엣 인지 및 텍스처 전달력이 낮음. 다소 좁은 여백으로 텍스트 가독성이 떨어짐.</p><p class='summary-section'><span class='summary-label'>[디자인 솔루션]</span>미니멀 톤앤무드 확립, 모델 착용 컷 중심 배치,  재촬영 디테일 컷으로 제품 소재와 착용 컷에 온전히 집중하도록 유도.</p><p class='summary-section'><span class='summary-label'>[결과]</span>유입량 및 판매량이 동기간 대비 가시적으로 증가</p>",
-    product: "(주)원풍물산 커넥트킨록",
-    concept: "스웨이드와 레더 디테일이 주는 빈티지한 남성미와 실용적인 구조를 강조한 모던 캐주얼 무드",
-    project: "기획 분석 & 레이아웃 리디자인 100%",
-    target: "모바일 가독성을 중요시하며 제품 소재의 본질적 가치를 탐색하는 2030 컨템포러리 남성복 소비자"
+    summary: "기존 상세페이지의 정보 밀도와 작은 이미지 문제를 개선해, 모델 착용 컷과 소재 디테일이 먼저 읽히도록 구매 흐름을 재설계한 남성복 상세페이지 리뉴얼입니다.",
+    product: "분절된 레이아웃과 좁은 여백으로 제품 실루엣, 소재 텍스처, 핵심 정보의 우선순위가 명확하지 않음",
+    concept: "기존 페이지 진단, 정보 우선순위 및 레이아웃 재설계, 촬영·디테일 이미지 선별 100%",
+    project: "기존·경쟁 페이지 분석 > 모바일 정보 구조 정리 > 착용·소재 디테일 확대 > 여백과 타이포 체계 개선",
+    target: "제품 이해와 구매 검토 흐름을 개선했으며, 리뉴얼 적용 후 동기간 대비 유입량과 판매량 상승을 확인",
+    labels: caseStudyFieldLabels
   },
   edinburghClub: {
     category: "상세페이지",
-    title: "브랜드 : 에든버러클럽",
+    title: "Edinburgh Club · Product Page",
     image: "assets/detail_05_edinburgh_club.webp",
     alt: "Edinburgh Club menswear detail page",
     summary: "브리티시 클래식 무드의 니트웨어를 촬영 이미지와 소재 디테일 중심으로 풀어내고, 컬러·사이즈·케어 정보를 차분하게 정리하여 프리미엄 소재감과 브랜드 감성을 전달한 남성복 상세페이지입니다.",
@@ -86,7 +97,7 @@ Object.assign(works, {
   },
   productIntro: {
     category: "홍보 자료 / 인쇄물",
-    title: "치약소개서",
+    title: "Tooth Granule Product Deck",
     image: "assets/print_03_toothgranule_deck.webp",
     alt: "Dencle tooth granule product introduction deck",
     summary: "덴클 그래뉼 치약을 소개하는 제품소개서로, 브랜드 소개에서 특허 기술, 세부 제품군까지 이어지는 정보 흐름을 설계했습니다. 인포그래픽과 아이콘을 활용해 그래뉼 공법과 컬러체인지 기술의 차별점을 직관적으로 보여주고, 처음 접하는 거래처도 제품력을 쉽게 이해하도록 구성했습니다.",
@@ -97,7 +108,7 @@ Object.assign(works, {
   },
   brochureGranule: {
     category: "홍보 자료 / 인쇄물",
-    title: "특허기술 브로슈어",
+    title: "Patent Technology Brochure",
     image: "assets/print_01_patent_tech_brochure.webp",
     alt: "Dencle patented technology brochure",
     summary: "덴클의 특허 기술인 그래뉼 공법과 컬러체인지 기술의 차별점을 직관적으로 전달하기 위해 클린하고 모던한 톤을 적용한 브로슈어입니다. 그린 컬러와 인포그래픽을 활용해 기술적 신뢰성과 혁신성을 강조하고, 화이트 기반 섹션 분리로 가독성을 높였습니다.",
@@ -108,7 +119,7 @@ Object.assign(works, {
   },
   edinburghCompanyDeck: {
     category: "홍보 자료 / 인쇄물",
-    title: "킨록앤더슨 에든버러 회사소개서",
+    title: "Edinburgh Company Deck",
     image: "assets/print_04_edinburgh_company_deck.webp",
     alt: "Kinloch Anderson Edinburgh company introduction deck",
     summary: "킨록앤더슨 에든버러클럽의 브리티시 헤리티지와 클래식한 브랜드 정체성을 전달하기 위해, 아카이브 이미지와 타탄 패턴, 빈티지한 종이 질감을 활용한 회사소개서입니다. 브랜드의 역사와 제품 디테일이 함께 읽히도록 구성해 바이어가 브랜드의 무드와 상품성을 동시에 이해할 수 있도록 설계했습니다.",
@@ -120,7 +131,7 @@ Object.assign(works, {
   },
   connectKinlochProposal: {
     category: "홍보 자료 / 인쇄물",
-    title: "커넥트킨록 회사소개서",
+    title: "Connect Kinloch Proposal",
     image: "assets/print_05_connect_kinloch_proposal.webp",
     alt: "Connect Kinloch company proposal deck",
     summary: "커넥트킨록의 성장 지표, 룩북 이미지, 핵심 상품군, 브랜드 포지셔닝을 한눈에 보여주기 위해 제작한 사업제안서형 회사소개서입니다. 플랫폼 MD와 바이어가 브랜드의 현재 성과와 판매 가능성을 빠르게 판단할 수 있도록 그래프, 룩북, 상품 정보를 명확한 구조로 정리했습니다.",
@@ -156,7 +167,7 @@ Object.assign(works, {
   },
   seasonOffBanner: {
     category: "프로모션 / 이벤트",
-    title: "Season Off Banner",
+    title: "Season-Off Banner",
     image: "assets/event_04_season_off_banner.webp",
     alt: "Edinburgh Club season off official mall banner",
     summary: "간절기 무드가 느껴지는 어두운 톤의 룩북 이미지를 중심으로, 시즌오프 세일 메시지가 과하게 튀지 않으면서도 즉시 인지되도록 설계한 공식몰 빅배너입니다.",
@@ -168,7 +179,7 @@ Object.assign(works, {
   },
   chuseokBigSale: {
     category: "프로모션 / 이벤트",
-    title: "Chuseok Big Sale Banner",
+    title: "Chuseok Big Sale",
     image: "assets/event_05_chuseok_big_sale.webp",
     alt: "Kinloch by Kinloch Anderson Chuseok big sale banner",
     summary: "킨록 바이 킨록앤더슨의 안정적인 남성복 이미지를 유지하면서, 추석 시즌의 따뜻한 색감과 낙엽 그래픽을 더해 명절 프로모션임을 직관적으로 전달한 빅세일 배너입니다.",
@@ -180,7 +191,7 @@ Object.assign(works, {
   },
   instagramFeed: {
     category: "SNS / 디지털 콘텐츠",
-    title: "Instagram Feed",
+    title: "Dencle Instagram Feed",
     image: "assets/sns_01_dencle_moodboard.webp",
     alt: "Dencle Instagram feed mood board",
     summary: "화이트 배경을 중심으로 깔끔한 레이아웃을 구성하고, 제품 컬러를 포인트로 사용해 SNS 환경에서도 기능과 인증 정보가 빠르게 전달되도록 정리한 피드 디자인입니다.",
@@ -202,7 +213,7 @@ Object.assign(works, {
   },
   edinburghCardNews: {
     category: "SNS / 디지털 콘텐츠",
-    title: "Winter Office Styling Cards",
+    title: "Winter Office Styling Content",
     image: "assets/sns_03_edinburgh_cardnews.webp",
     alt: "Edinburgh Club fashion card news",
     summary: "에든버러클럽의 클래식한 겨울 오피스룩을 셔츠, 니트, 수트 조합 중심으로 풀어내고, 스타일링 팁을 함께 배치해 SNS 안에서도 정보성과 브랜드 무드가 동시에 전달되도록 구성한 카드뉴스입니다.",
@@ -224,7 +235,7 @@ Object.assign(works, {
   },
   edinburghEventInfo: {
     category: "SNS / 디지털 콘텐츠",
-    title: "Musinsa Clearance Sale",
+    title: "Clearance Sale Content",
     image: "assets/sns_05_edinburgh_event.webp",
     alt: "Edinburgh Club Musinsa clearance sale content",
     summary: "무신사 클리어런스 세일 정보를 제품 카드 형태로 정리하고, 메모지와 클립 요소를 활용해 행사성을 더하면서도 에든버러클럽의 클래식한 제품 이미지가 깔끔하게 보이도록 구성한 이벤트 콘텐츠입니다.",
@@ -246,7 +257,7 @@ Object.assign(works, {
   },
   influencerSponsorship: {
     category: "SNS / 디지털 콘텐츠",
-    title: "인플루언서 협찬",
+    title: "Influencer Styling Content",
     image: "assets/sns_07_influencer_sponsorship.webp",
     alt: "Connect Kinloch influencer sponsorship styling content",
     summary: "인플루언서 착용 이미지를 활용해 실제 코디 흐름과 제품 스타일링 포인트를 보여주는 SNS 콘텐츠입니다. 일상 사진 안에서 아이템의 핏과 무드를 자연스럽게 전달하도록 구성했습니다.",
@@ -257,14 +268,14 @@ Object.assign(works, {
   },
   pinkHaloTintLaunch: {
     category: "SNS / 디지털 콘텐츠",
-    title: "Pink Halo Aura Tint Launch",
+    title: "Pink Halo Tint Launch",
     image: "assets/sns_09_pink_halo_tint.png",
     alt: "Pink Halo Aura Tint new product launch banner",
     summary: "색조 브랜드 신상품 출시를 가정해 제작한 런칭 배너 및 광고 이미지입니다. 틴트명, 컬러 라인업, 모델 이미지까지 함께 기획해 핑크 톤의 밝고 러블리한 분위기를 만들고, 플랫폼 메인 배너나 SNS 광고에서 신제품의 컬러감을 빠르게 인지할 수 있도록 구성했습니다.",
     product: "Pink Halo Aura Tint 신상품 출시 배너",
     concept: "핑크 무드와 글로시한 메이크업 이미지를 중심으로 한 색조 브랜드 런칭 비주얼",
     project: "틴트명 기획 / 모델 이미지 제작 / 컬러 라인업 구성 / 배너 레이아웃 디자인",
-    target: "신상품 색조 제품을 탐색하는 1020-30 뷰티 소비자 / 뷰티 플랫폼 및 SNS 유저"
+    target: "신상품 색조 제품을 탐색하는 10대 후반~30대 뷰티 소비자 / 뷰티 플랫폼 및 SNS 이용자"
   },
   onairDisplay: {
     category: "Offline",
@@ -298,7 +309,7 @@ Object.assign(works, {
   },
   birthdayEvent: {
     category: "프로모션 / 이벤트",
-    title: "10th Birthday Event Page",
+    title: "Dencle 10th Anniversary",
     image: "assets/event_01_birthday_10th.webp",
     alt: "10th birthday event page",
     summary: "덴클 10주년을 맞아 브랜드 스토리와 고객 감사 혜택을 모바일 스크롤 흐름에 맞춰 구성한 이벤트 페이지입니다. 럭키박스와 100원딜, 쿠폰 혜택을 그래픽 요소와 명확한 CTA로 연결해 참여 기대감을 높였습니다.",
@@ -310,7 +321,7 @@ Object.assign(works, {
   },
   brochureToothbrush: {
     category: "홍보 자료 / 인쇄물",
-    title: "칫솔3종 브로슈어",
+    title: "Toothbrush Brochure",
     image: "assets/print_02_toothbrush_brochure.webp",
     alt: "Dencle three toothbrush line brochure",
     summary: "덴클 칫솔 프리미엄 라인의 기능적 차별성과 구조적 특장점을 전달하기 위해 모노톤 기반의 전문적인 톤앤매너로 구성한 브로슈어입니다. 특허 구조, 항균 테스트, FDA 승인, 수상 이력 등을 함께 배치해 글로벌 시장에서도 제품 신뢰도가 느껴지도록 설계했습니다.",
@@ -454,7 +465,7 @@ Object.assign(works, {
   },
   visualAi13: {
     category: "SNS / 디지털 콘텐츠",
-    title: "Hydration Ampoule Ad Design",
+    title: "Hydration Ampoule Ad",
     image: "assets/visual_ai_13.jpg",
     alt: "Medipeel hydration ampoule beauty advertisement design using AI generated background",
     summary: "수분감 있는 블루 톤의 AI 생성 배경을 기반으로, 앰플 제품의 효능 키워드와 정보 구조를 직접 배치한 뷰티 디지털 광고 시안입니다. SNS 피드, 브랜드 마케팅 배너, 상세페이지 키 비주얼로 확장할 수 있도록 제품명과 핵심 베네핏이 빠르게 읽히는 구조로 디자인했습니다.",
@@ -489,7 +500,7 @@ Object.assign(works, {
   },
   portraitRetouch: {
     category: "촬영본 보정 & 리터치",
-    title: "인물 보정",
+    title: "인물 피부 보정",
     image: "assets/retouch_01_portrait.png",
     alt: "인물 촬영 원본과 보정본 비교",
     summary: "",
@@ -504,7 +515,7 @@ Object.assign(works, {
   },
   portraitRetouch02: {
     category: "촬영본 보정 & 리터치",
-    title: "인물 보정",
+    title: "인물 피부·톤 보정",
     image: "assets/retouch_02_korean_portrait.png",
     alt: "한국인 남성 인물 촬영 원본과 보정본 비교",
     summary: "",
@@ -520,7 +531,7 @@ Object.assign(works, {
   },
   portraitRetouch03: {
     category: "촬영본 보정 & 리터치",
-    title: "인물 보정",
+    title: "배경·얼굴·의상 보정",
     image: "assets/retouch_03_foreign_portrait.png",
     alt: "외국인 남성 인물 촬영 원본과 보정본 비교",
     summary: "",
@@ -537,7 +548,7 @@ Object.assign(works, {
   },
   garmentRetouch01: {
     category: "촬영본 보정 & 리터치",
-    title: "의상 보정",
+    title: "베이지 팬츠 주름 보정",
     image: "assets/retouch_04_beige_pants.png",
     alt: "베이지 팬츠 촬영 원본과 주름 보정본 비교",
     summary: "",
@@ -554,7 +565,7 @@ Object.assign(works, {
   },
   garmentRetouch02: {
     category: "촬영본 보정 & 리터치",
-    title: "의상 보정",
+    title: "블랙 팬츠 주름 보정",
     image: "assets/retouch_05_black_pants.png",
     alt: "블랙 팬츠 촬영 원본과 주름 보정본 비교",
     summary: "",
@@ -571,9 +582,18 @@ Object.assign(works, {
   }
 });
 
+[
+  "visualAi01", "visualAi02", "visualAi03", "visualAi04", "visualAi05", "visualAi06",
+  "visualAi08", "visualAi09", "visualAi10", "visualAi11", "visualAi12", "visualAi13",
+  "visualAi14", "visualAi15", "pinkHaloTintLaunch"
+].forEach((key) => {
+  if (works[key]) works[key].personal = true;
+});
+
 const modal = document.getElementById("workModal");
 const closeButton = document.querySelector(".close");
 const modalCategory = document.getElementById("modalCategory");
+const modalPersonalLabel = document.getElementById("modalPersonalLabel");
 const modalTitle = document.getElementById("modalTitle");
 const modalImage = document.getElementById("modalImage");
 const modalSummary = document.getElementById("modalSummary");
@@ -598,21 +618,26 @@ const btnBefore = document.getElementById("btnBefore");
 const btnAfter = document.getElementById("btnAfter");
 let currentWorkKey = null;
 
+function setBeforeAfterView(mode) {
+  const work = currentWorkKey ? works[currentWorkKey] : null;
+  if (!work?.beforeImage) return;
+
+  [btnBefore, btnAfter].forEach((button) => {
+    button?.classList.toggle("active", button.id === `btn${mode[0].toUpperCase()}${mode.slice(1)}`);
+  });
+
+  modalImage.hidden = false;
+  modalImage.src = mode === "before" ? work.beforeImage : work.image;
+  modalImage.alt = `${work.title} ${mode === "before" ? "개선 전" : "개선 후"}`;
+}
+
 if (btnBefore && btnAfter) {
   btnBefore.addEventListener("click", () => {
-    if (currentWorkKey && works[currentWorkKey]) {
-      modalImage.src = works[currentWorkKey].beforeImage;
-      btnBefore.classList.add("active");
-      btnAfter.classList.remove("active");
-    }
+    setBeforeAfterView("before");
   });
 
   btnAfter.addEventListener("click", () => {
-    if (currentWorkKey && works[currentWorkKey]) {
-      modalImage.src = works[currentWorkKey].image;
-      btnAfter.classList.add("active");
-      btnBefore.classList.remove("active");
-    }
+    setBeforeAfterView("after");
   });
 }
 
@@ -624,6 +649,7 @@ function openWork(key) {
   const usesComparisonLayout = Boolean(work.comparisonLayout);
 
   modalCategory.textContent = work.category;
+  if (modalPersonalLabel) modalPersonalLabel.hidden = !work.personal;
   modalTitle.textContent = work.title;
   modalImage.src = work.image;
   modalImage.alt = work.alt;
@@ -648,10 +674,10 @@ function openWork(key) {
   if (beforeAfterTabs) {
     if (work.beforeImage) {
       beforeAfterTabs.style.display = "flex";
-      if (btnAfter) btnAfter.classList.add("active");
-      if (btnBefore) btnBefore.classList.remove("active");
+      setBeforeAfterView("after");
     } else {
       beforeAfterTabs.style.display = "none";
+      modalImage.hidden = usesComparisonLayout;
     }
   }
 
@@ -844,10 +870,10 @@ const resetText = document.getElementById("resetText");
 const editableFields = document.querySelectorAll("[data-edit]");
 const storageKey = "hyejiPortfolioText";
 const cleanDefaultText = {
-  heroTitle: "안녕하세요 와인같은 디자이너 권혜지 입니다.",
+  heroTitle: "커머스와 브랜드의 구매 흐름을 설계하는 디자이너 권혜지입니다.",
   heroSubtitle: "Introduction",
   profileText: "1997.09.25 / 8403ss@naver.com / 010.8863.8403",
-  introText: "와인은 오픈 직후부터 중간, 그리고 마지막까지 향과 맛이 변화하며, 한 병을 즐기는 동안 다양한 매력을 선사합니다. 저는 이러한 와인처럼, 마케팅과 디자인을 아우르는 경험을 통해 다채로운 시각과 인사이트를 갖춘 디자이너입니다. 약 3년간의 디자인 경력과 이전 마케팅 회사에서의 실무 경험을 바탕으로, 단순히 보기 좋은 디자인을 넘어, 전략적으로 브랜드 가치를 극대화하는 디자인을 만들어낼 수 있습니다. 다양한 경험에서 나오는 통찰력과 유연한 사고를 강점으로, 디자인 이상의 시너지를 만들어가는 디자이너가 되고자 합니다.",
+  introText: "상세페이지를 중심으로 브랜드 캠페인, SNS, 프로모션, 인쇄물까지 제품 정보를 채널에 맞는 구매 경험으로 설계합니다. 약 3년간 구강케어와 패션 브랜드에서 제품 특장점과 고객 행동을 분석하고, 공식몰·카카오톡 선물하기·SNS 등 플랫폼별 정보 우선순위와 비주얼 톤을 조정해왔습니다. 마케팅 실무 경험을 바탕으로 보기 좋은 화면을 넘어 고객이 제품을 이해하고 선택할 수 있는 흐름을 만드는 디자이너입니다.",
   introNote: "",
   folderLabel1: "상세페이지",
   folderLabel2: "SNS / 디지털 콘텐츠",
@@ -858,7 +884,7 @@ const cleanDefaultText = {
   folderLabel6: "오프라인 디자인 / VMD",
   folderLabel7: "패키지 / 제품 그래픽",
   exp0Title: "(주) 원풍물산",
-  exp0Date: "2025.05.26 - 재직중",
+  exp0Date: "2025.05.26 - 재직 중",
   exp0Text: [
     "웹 콘텐츠 및 상세페이지 디자인",
     "- 시즌 신상품 상세페이지 기획 및 에디토리얼 레이아웃 디자인",
@@ -875,7 +901,7 @@ const cleanDefaultText = {
     "- B2B 제안 및 내부 PT용 브랜드 소개서·브로슈어 리뉴얼"
   ].join("\n"),
   exp1Title: "(주) 덴클",
-  exp1Date: "2022.12.5 - 2024.06.01",
+  exp1Date: "2022.12.05 - 2024.06.01",
   exp1Text: [
     "웹 콘텐츠 및 온라인 커머스 디자인",
     "- 신제품 출시 상세페이지 기획 및 디자인 제작",
@@ -947,7 +973,7 @@ function renderHeroTitle(value) {
   const target = document.getElementById("heroTitle");
   if (!target) return;
   const name = "권혜지";
-  const highlightTerm = "와인같은 디자이너";
+  const highlightTerm = "구매 흐름을 설계하는 디자이너";
   const text = String(value).trim();
   
   if (text.includes(name)) {
@@ -955,15 +981,12 @@ function renderHeroTitle(value) {
     let before = (parts[0] || "").trim();
     const after = (parts.slice(1).join(name) || "").trim();
     
-    // '와인같은 디자이너'가 이름 앞에 포함되어 있다면 형광펜(highlight-marker) 적용
     if (before.includes(highlightTerm)) {
       const subParts = before.split(highlightTerm);
       const greeting = (subParts[0] || "").trim();
       const extra = (subParts[1] || "").trim();
-      // '안녕하세요'는 일반 텍스트로, '와인같은 디자이너'에만 마커 처리
       before = `${greeting} <span class="highlight-marker">${highlightTerm}</span>${extra}`;
     } else {
-      // 텍스트가 다를 경우도 대비하여 마커 처리
       before = `<span class="highlight-marker">${before}</span>`;
     }
     
@@ -1081,9 +1104,10 @@ function getSavedText() {
       saved.categoryOrderVersion = "2026-07-09-retouch-folder-v1";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.introCopyVersion !== "2026-07-06-about-3-years") {
+    if (saved.introCopyVersion !== "2026-07-13-commerce-positioning-v2") {
+      saved.heroTitle = cleanDefaultText.heroTitle;
       saved.introText = cleanDefaultText.introText;
-      saved.introCopyVersion = "2026-07-06-about-3-years";
+      saved.introCopyVersion = "2026-07-13-commerce-positioning-v2";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     if (saved.experienceLayoutVersion !== "2026-06-29-experience-accordion-olive-list") {
@@ -1099,39 +1123,53 @@ function getSavedText() {
       saved.experienceLayoutVersion = "2026-06-29-experience-accordion-olive-list";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.detailContentVersion !== "2026-06-26-detail-5works") {
+    if (saved.dateFormatVersion !== "2026-07-13-date-format-v1") {
+      ["exp0Date", "exp1Date", "exp2Date", "exp3Date"].forEach((key) => {
+        saved[key] = cleanDefaultText[key];
+      });
+      saved.dateFormatVersion = "2026-07-13-date-format-v1";
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+    }
+    if (saved.detailContentVersion !== "2026-07-13-detail-case-study-v1") {
       ["toothbrushGlobal", "granuleOfficial", "granule", "connectKinloch", "edinburghClub"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.detailContentVersion = "2026-06-26-detail-5works";
+      saved.detailContentVersion = "2026-07-13-detail-case-study-v1";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.snsContentVersion !== "2026-07-08-sns-7works-no-sale-ppl") {
+    if (saved.snsContentVersion !== "2026-07-13-sns-title-personal-v1") {
       ["instagramFeed", "kinlochMoodBoard", "edinburghCardNews", "edinburghSaleInfo", "edinburghEventInfo", "youtuberPpl", "influencerSponsorship", "visualAi13", "pinkHaloTintLaunch"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.snsContentVersion = "2026-07-08-sns-7works-no-sale-ppl";
+      saved.snsContentVersion = "2026-07-13-sns-title-personal-v1";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.eventContentVersion !== "2026-06-29-event-5works") {
+    if (saved.eventContentVersion !== "2026-07-13-event-title-v1") {
       ["birthdayEvent", "summerEvent", "summerBanner", "seasonOffBanner", "chuseokBigSale"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.eventContentVersion = "2026-06-29-event-5works";
+      saved.eventContentVersion = "2026-07-13-event-title-v1";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.printContentVersion !== "2026-06-29-print-5works") {
+    if (saved.printContentVersion !== "2026-07-13-print-title-v1") {
       ["brochureGranule", "brochureToothbrush", "productIntro", "edinburghCompanyDeck", "connectKinlochProposal"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.printContentVersion = "2026-06-29-print-5works";
+      saved.printContentVersion = "2026-07-13-print-title-v1";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
-    if (saved.visualContentVersion !== "2026-07-08-visual-beauty-10works-tint") {
+    if (saved.visualContentVersion !== "2026-07-13-visual-personal-v1") {
       ["visualAi01", "visualAi02", "visualAi03", "visualAi04", "visualAi05", "visualAi06", "visualAi08", "visualAi09", "visualAi10", "visualAi11", "visualAi12", "visualAi13", "visualAi14", "visualAi15"].forEach((key) => {
         if (saved.works?.[key]) delete saved.works[key];
       });
-      saved.visualContentVersion = "2026-07-08-visual-beauty-10works-tint";
+      saved.visualContentVersion = "2026-07-13-visual-personal-v1";
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+    }
+    if (saved.retouchContentVersion !== "2026-07-13-retouch-title-v1") {
+      ["portraitRetouch", "portraitRetouch02", "portraitRetouch03", "garmentRetouch01", "garmentRetouch02"].forEach((key) => {
+        if (saved.works?.[key]) delete saved.works[key];
+      });
+      saved.retouchContentVersion = "2026-07-13-retouch-title-v1";
       localStorage.setItem(storageKey, JSON.stringify(saved));
     }
     return saved;

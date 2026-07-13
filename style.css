@@ -920,6 +920,22 @@ dd {
   margin-bottom: 8px;
 }
 
+.modal-kicker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.modal-kicker .eyebrow {
+  margin: 0;
+}
+
+.modal-personal-label[hidden] {
+  display: none;
+}
+
 .modal-copy h2 {
   font-family: Pretendard, "Noto Sans KR", sans-serif;
   margin-top: 4px;
@@ -1886,6 +1902,35 @@ body.design-mode .folder-item {
   line-height: 1;
 }
 
+.work-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.work-meta .work-label {
+  margin-top: 0;
+}
+
+.work-personal-label,
+.modal-personal-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #1e38b8;
+  color: #ffffff;
+  font-family: Pretendard, "Noto Sans KR", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .works-grid-container .work span {
   margin-top: 8px;
   font-size: 14px;
@@ -1900,6 +1945,15 @@ body.design-mode .folder-item {
 
 .works-grid-container .work span::before {
   display: none; /* 깔끔하게 도트 아이콘 제거 */
+}
+
+.works-grid-container .work > span:last-child {
+  min-height: 40px;
+  line-height: 1.4;
+}
+
+.timeline-date {
+  font-variant-numeric: tabular-nums;
 }
 
 .retouch-card-comparison {
@@ -2054,6 +2108,7 @@ body.design-mode .folder-item {
     grid-template-columns: 1fr !important;
     gap: 20px;
   }
+
 }
 
 
