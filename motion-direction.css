@@ -38,3 +38,6 @@ html{scroll-padding-top:24px}body{overflow-x:clip}.wrap{width:min(1360px,calc(10
 .reel-track figure>a{display:block;width:100%;height:100%;cursor:zoom-in;border-radius:8px}
 @media(max-width:699px){.reel-flow{gap:12px}}
 @media(prefers-reduced-motion:reduce){.work-reel{overflow-x:auto}.reel-track,.reel-reverse{transform:none}.reel-flow{animation:none}.reel-flow figure[aria-hidden=true]{display:none}}
+
+.rolling-project-media[href]{cursor:pointer;color:inherit;text-decoration:none}
+.rolling-project-media[href]:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
