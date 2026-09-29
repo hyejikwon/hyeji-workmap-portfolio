@@ -20,6 +20,7 @@
   let imageTrigger=null;
   document.addEventListener('click',e=>{const link=e.target.closest('a[data-enlarge]');if(!link)return;e.preventDefault();imageTrigger=link;viewerImage.src=link.href;viewerImage.alt=(link.querySelector('img')||link.closest('.study-panel, .detail-section')?.querySelector('img'))?.alt||'작업 이미지';viewer.classList.remove('is-zoomed');zoomButton.textContent='더 확대';zoomButton.setAttribute('aria-pressed','false');document.body.classList.add('modal-open');viewer.showModal();viewer.scrollTop=0;viewer.querySelector('.image-viewer-canvas').scrollTo(0,0);});
   document.getElementById('close-image').addEventListener('click',()=>viewer.close());
+  document.getElementById('back-image').addEventListener('click',()=>viewer.close());
   viewer.addEventListener('cancel',e=>{e.preventDefault();viewer.close();});
   viewer.addEventListener('close',()=>{viewerImage.removeAttribute('src');if(!dialog.open)document.body.classList.remove('modal-open');imageTrigger?.focus({preventScroll:true});});
   zoomButton.addEventListener('click',()=>{const zoomed=viewer.classList.toggle('is-zoomed');zoomButton.textContent=zoomed?'화면에 맞추기':'더 확대';zoomButton.setAttribute('aria-pressed',String(zoomed));});
