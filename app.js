@@ -1,7 +1,9 @@
 (() => {
   'use strict';
   const allWorks=window.PORTFOLIO_WORKS||[];
-  const works=allWorks.filter(w=>!['offline','retouch'].includes(w.type));
+  const categoryOrder={detail:0,event:1,sns:2,visual:3,print:4};
+  const snsOrder=['pinkHaloTintLaunch','visualAi13','instagramFeed','edinburghCardNews','edinburghEventInfo','kinlochMoodBoard','influencerSponsorship'];
+  const works=allWorks.filter(w=>!['offline','retouch'].includes(w.type)).sort((a,b)=>(categoryOrder[a.type]??99)-(categoryOrder[b.type]??99)||(a.type==='sns'?(snsOrder.indexOf(a.key)<0?99:snsOrder.indexOf(a.key))-(snsOrder.indexOf(b.key)<0?99:snsOrder.indexOf(b.key)):0));
   const byKey=Object.fromEntries(works.map(w=>[w.key,w]));
   const names={toothbrushGlobal:'덴클 글로벌 칫솔 상세페이지',granuleOfficial:'덴클 그래뉼 치약 · 공식몰',granule:'덴클 그래뉼 치약 · 카카오 선물하기',connectKinloch:'커넥트킨록 상세페이지 리뉴얼',edinburghClub:'에든버러클럽 니트웨어 상세페이지',pinkHaloTintLaunch:'뷰티 브랜드 제품 런칭 키비주얼',visualAi13:'수분 앰플 디지털 광고',instagramFeed:'덴클 인스타그램 피드',kinlochMoodBoard:'커넥트킨록 브랜드 무드보드',edinburghCardNews:'에든버러클럽 겨울 오피스룩',edinburghEventInfo:'에든버러클럽 클리어런스세일 카드뉴스',influencerSponsorship:'인플루언서 스타일링 콘텐츠',summerBanner:'에든버러클럽 여름 프로모션',seasonOffBanner:'에든버러클럽 시즌오프 배너',chuseokBigSale:'킨록 추석 빅세일 배너',summerEvent:'덴클 여름 프로모션 페이지',birthdayEvent:'덴클 10주년 프로모션',brochureGranule:'덴클 특허 기술 브로슈어',brochureToothbrush:'덴클 칫솔 브로슈어',productIntro:'덴클 그래뉼 제품소개서',edinburghCompanyDeck:'에든버러클럽 브랜드 소개서',connectKinlochProposal:'커넥트킨록 사업제안서'};
   const typeNames={detail:'상세페이지',sns:'SNS',event:'프로모션',visual:'AI 이미지 생성',print:'인쇄물'};
