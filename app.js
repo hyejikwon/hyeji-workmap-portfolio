@@ -53,7 +53,7 @@
     const reelProgress=clamp((vh-reel.getBoundingClientRect().top)/(vh+reel.offsetHeight));
     tracks.forEach((track,i)=>track.style.setProperty('--reel-x',(reduced.matches?0:(reelProgress-.5)*(i?-220:220))+'px'));
     const introProgress=clamp(-intro.getBoundingClientRect().top/Math.max(1,intro.offsetHeight-intro.querySelector('.intro-sticky').offsetHeight));
-    copyLines.forEach((line,i)=>line.style.setProperty('--line-opacity',reduced.matches?1:.3+.7*clamp((introProgress*copyLines.length-i+1))));
+    copyLines.forEach((line,i)=>line.style.setProperty('--line-opacity',reduced.matches?1:.26+.74*clamp((introProgress*copyLines.length-i+1))));
     const stackEnabled=!reduced.matches&&vh>=720&&innerWidth>=700;
     stackCards.forEach((card,i)=>{const next=stackCards[i+1];const progress=next?clamp((vh-next.getBoundingClientRect().top)/(vh-80)):0;card.style.setProperty('--stack-scale',stackEnabled?1-progress*.045:1);card.style.setProperty('--stack-shade',stackEnabled?1-progress*.05:1);});
     ticking=false;
