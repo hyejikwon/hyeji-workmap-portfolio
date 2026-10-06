@@ -10,12 +10,12 @@
   const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const plain=value=>String(value??'').replace(/<[^>]*>/g,'');
   const title=w=>names[w.key]||w.title;
-  let activeFilter='all',shown=6;
-  const grid=document.getElementById('archive-grid'),more=document.getElementById('load-more');
+  let activeFilter='all';
+  const grid=document.getElementById('archive-grid');
   function filteredWorks(){return works.filter(w=>activeFilter==='all'||w.type===activeFilter);}
-  function renderArchive(){const filtered=filteredWorks();grid.innerHTML=filtered.slice(0,shown).map(w=>`<a class="archive-item" href="#project/${esc(w.key)}"><div class="archive-picture"><img src="${esc(w.image)}" alt="${esc(w.alt||title(w))}" loading="lazy"></div><div class="archive-kind"><span>${esc(typeNames[w.type])}</span>${w.personal?'<span class="personal">개인 프로젝트'+(w.type==='visual'?' · AI':'')+'</span>':''}</div><h3>${esc(title(w))}</h3></a>`).join('');document.querySelector('.archive-count').textContent=`${filtered.length} WORKS`;more.hidden=shown>=filtered.length;more.innerHTML=`작업 더 보기 (${Math.max(0,filtered.length-shown)}) <span aria-hidden="true">+</span>`;}
-  document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{activeFilter=button.dataset.filter;shown=6;document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderArchive();}));
-  more.addEventListener('click',()=>{const previous=shown;shown+=6;renderArchive();grid.children[previous]?.focus({preventScroll:true});});renderArchive();
+  function renderArchive(){const filtered=filteredWorks();grid.innerHTML=filtered.map(w=>`<a class="archive-item" href="#project/${esc(w.key)}"><div class="archive-picture"><img src="${esc(w.image)}" alt="${esc(w.alt||title(w))}" loading="lazy"></div><div class="archive-kind"><span>${esc(typeNames[w.type])}</span>${w.personal?'<span class="personal">개인 프로젝트'+(w.type==='visual'?' · AI':'')+'</span>':''}</div><h3>${esc(title(w))}</h3></a>`).join('');document.querySelector('.archive-count').textContent=`${filtered.length} WORKS`;}
+  document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{activeFilter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderArchive();}));
+  renderArchive();
 
   const dialog=document.getElementById('project-dialog'),content=document.getElementById('project-content');
   const viewer=document.getElementById('image-viewer'),viewerImage=document.getElementById('viewer-image'),zoomButton=document.getElementById('zoom-image');
