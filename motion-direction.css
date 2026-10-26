@@ -46,3 +46,9 @@ html{scroll-padding-top:24px}body{overflow-x:clip}.wrap{width:min(1360px,calc(10
 .project-sequence .section-title-group,.archive .section-title-group{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px 22px;text-align:left}
 .project-sequence .section-title-note,.archive .section-title-note{margin:0;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:0;color:var(--muted);white-space:nowrap}
 @media(max-width:699px){.project-sequence .section-title-group,.archive .section-title-group{column-gap:14px}}
+
+/* Wadiz: three event previews, full pages in the existing image viewer. */
+.rolling-project.wadiz-project{background:#eef3f2}.rolling-project:nth-child(4){background:#f6f0f4}
+.wadiz-media{align-items:center;gap:14px;padding:24px}.wadiz-media figure{width:calc((100% - 28px)/3);height:85%;justify-content:flex-start}.event-crop{height:100%;min-height:0;overflow:hidden;border-radius:5px;box-shadow:0 6px 16px #20313b16}.wadiz-media .event-crop img{width:100%;height:100%;object-fit:cover;object-position:top}.wadiz-media figcaption{flex-shrink:0}
+.event-thumbnail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;height:100%;overflow:hidden;align-items:stretch}.archive-picture .event-thumbnail img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:3px}
+@media(max-width:699px){.wadiz-media{height:300px;gap:10px;padding:16px}.wadiz-media figure{width:calc((100% - 20px)/3);height:100%}.event-thumbnail{gap:5px}}
