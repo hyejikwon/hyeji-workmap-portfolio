@@ -392,9 +392,9 @@ window.PORTFOLIO_WORKS = [
     "key": "wadizFunding",
     "type": "event",
     "category": "와디즈 펀딩 이벤트 페이지",
-    "title": "와디즈 펀딩 이벤트 페이지 시안 작업",
-    "image": "assets/wadiz-event-01.jpg",
-    "alt": "덴클 와디즈 펀딩 이벤트 페이지 시안",
+    "title": "와디즈 펀딩 이벤트 페이지",
+    "image": "assets/wadiz-cover.svg",
+    "alt": "덴클 와디즈 이벤트 페이지 대표 이미지",
     "summary": "펀딩 전 알림 신청과 사전체험단 모집, 오픈 직후 72시간 참여 혜택을 안내하는 이벤트 페이지 시안입니다. 세 이벤트의 컬러와 그래픽을 통일하면서, 각각의 혜택과 참여 방법이 명확하게 읽히도록 구성했습니다.",
     "contribution": "디자인 · 제작 100% (텍스트 제외)",
     "events": [
@@ -433,7 +433,13 @@ window.PORTFOLIO_WORKS = [
         "heading": "정보 구성",
         "body": "이벤트명과 혜택을 먼저 보여주고, 참여 절차와 상세 안내를 이어 배치했습니다. 세 페이지에 공통된 시각 규칙을 적용해 하나의 펀딩 프로모션으로 연결했습니다."
       }
-    ]
+    ],
+    "supplement": {
+      "title": "카카오 채널톡 발송 이미지",
+      "image": "assets/wadiz-channel-message.jpg",
+      "alt": "와디즈 오픈 예정 알림 신청 이벤트 카카오 채널톡 발송 이미지",
+      "description": "채널 메시지에서 알림 신청 혜택이 바로 읽히도록 구성한 발송 이미지입니다. 이벤트 페이지의 컬러와 경품 비주얼을 이어 사용하고, 정해진 화면 안에 핵심 메시지를 간결하게 담았습니다."
+    }
   },
   {
     "key": "birthdayEvent",
