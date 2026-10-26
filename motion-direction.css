@@ -51,3 +51,9 @@ html{scroll-padding-top:24px}body{overflow-x:clip}.wrap{width:min(1360px,calc(10
 .rolling-project.wadiz-project{background:#eef3f2}.rolling-project:nth-child(4){background:#f6f0f4}
 .wadiz-media{padding:18px}.wadiz-media figure{width:100%;height:100%}.wadiz-media img{width:100%;height:100%;object-fit:contain}
 @media(max-width:699px){.wadiz-media{height:300px;padding:10px}}
+
+/* Advertising case study: preserve the original formats and leave room to read. */
+.ad-gallery{display:grid;gap:32px;margin-top:30px}.ad-artwork{margin:0 auto;width:100%;max-width:970px}.ad-artwork.ad-square{max-width:560px}.ad-artwork>a{display:block;padding:22px;background:#e7eaf0;border-radius:12px}.ad-artwork img{width:100%;height:auto;border-radius:5px;box-shadow:0 4px 12px #202c3d12}.ad-artwork figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px;color:var(--muted);font-size:13px}.ad-artwork figcaption a{white-space:nowrap;text-decoration:underline;text-underline-offset:4px}.ad-artwork.ad-square figcaption{flex-wrap:wrap}
+@media(max-width:699px){.ad-artwork>a{padding:10px}.ad-artwork figcaption{flex-wrap:wrap;font-size:12px}.ad-gallery{gap:25px}}
+
+.ad-artwork.ad-narrow{max-width:772px}
