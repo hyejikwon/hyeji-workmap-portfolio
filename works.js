@@ -443,6 +443,7 @@ window.PORTFOLIO_WORKS = [
   },
   {
     "key": "dencleAds",
+    "periodLabel": "2023 · Instagram / 모비온",
     "type": "event",
     "category": "인스타그램 · 모비온 광고",
     "title": "덴클 디지털 광고 소재 디자인",

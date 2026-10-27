@@ -57,3 +57,5 @@ html{scroll-padding-top:24px}body{overflow-x:clip}.wrap{width:min(1360px,calc(10
 @media(max-width:699px){.ad-artwork>a{padding:10px}.ad-artwork figcaption{flex-wrap:wrap;font-size:12px}.ad-gallery{gap:25px}}
 
 .ad-artwork.ad-narrow{max-width:772px}
+
+.archive-item .project-period,.detail-header .project-period{color:#777c86;font-size:12px;font-weight:400;letter-spacing:0;line-height:1.6}.archive-item .project-period{margin-top:6px}.detail-header .project-period{margin:-12px 0 22px}
