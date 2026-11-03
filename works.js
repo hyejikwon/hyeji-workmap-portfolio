@@ -872,19 +872,55 @@ window.PORTFOLIO_WORKS = [
     "summary": "홈쇼핑 방송 환경에서 제품과 브랜드가 즉시 인지되도록 구성한 오프라인 디스플레이입니다.",
     "purpose": "방송 화면과 현장 동선에서 제품 존재감 강화",
     "point": "제품 스케일, 패키지 컬러, 브랜드 로고 노출을 고려한 공간 비주얼",
-    "role": "Visual direction / print and production support"
+    "role": "Visual direction / print and production support",
+    "hidden": true
+  },
+  {
+    "key": "denclePackage",
+    "type": "offline",
+    "category": "제품 · 패키지 디자인",
+    "title": "덴클 칫솔 컬러·그래픽 및 패키지 디자인",
+    "image": "assets/package-cover.svg",
+    "alt": "덴클 대용량 단상자와 개별 케이스, 칫솔 컬러·인쇄 그래픽 구성",
+    "summary": "기존 그래뉼 치약의 색감과 클래식한 그래픽을 이어받아, 칫솔의 컬러·인쇄 그래픽과 개별 케이스, 대용량 단상자를 디자인했습니다. 서로 다른 형태의 제품이 함께 놓였을 때 하나의 브랜드로 보이도록 구성했습니다.",
+    "contribution": "칫솔 컬러·인쇄 그래픽 / 개별 케이스·대용량 단상자 디자인 100%",
+    "existingAssets": "칫솔 형태·구조 및 기존 치약 디자인은 브랜드의 기존 자산을 활용했습니다.",
+    "gallery": [
+      "assets/package-colors.png",
+      "assets/package-family.png",
+      "assets/package-in-hand.png",
+      "assets/package-carton-art.png",
+      "assets/package-case-art.png"
+    ],
+    "notes": []
   },
   {
     "key": "hostPanel",
     "type": "offline",
-    "category": "Offline",
-    "title": "Host Panel",
+    "category": "홈쇼핑 판넬",
+    "title": "덴클 홈쇼핑 방송 판넬 디자인",
     "image": "assets/host_panels.jpg",
     "alt": "Home shopping host panels",
     "summary": "쇼호스트가 방송 중 핵심 혜택과 제품 정보를 빠르게 전달할 수 있도록 만든 핸드 패널입니다.",
     "purpose": "혜택, 가격, 제품 특징을 방송 화면에서 즉시 읽히게 구성",
     "point": "강한 대비, 짧은 문장, 화면 노출을 고려한 글자 크기와 정보 밀도",
-    "role": "Visual design 100% / text planning with MD direction"
+    "role": "Visual design 100% / text planning with MD direction",
+    "hidden": false,
+    "contribution": "디자인 100% · 텍스트 기획은 MD와 협업",
+    "notes": [
+      {
+        "heading": "전달할 정보",
+        "body": "제품의 특징과 혜택을 방송 중 한눈에 읽을 수 있도록 판넬별 핵심 메시지를 구분했습니다."
+      },
+      {
+        "heading": "화면 구성",
+        "body": "큰 글자와 명확한 대비를 사용하고, 강조할 숫자와 제품 이미지를 중심으로 정보의 순서를 정리했습니다."
+      },
+      {
+        "heading": "제작 범위",
+        "body": "MD와 협의한 텍스트를 바탕으로 판넬의 레이아웃과 시각 디자인을 제작했습니다."
+      }
+    ]
   },
   {
     "key": "menuBanner",
@@ -896,7 +932,8 @@ window.PORTFOLIO_WORKS = [
     "summary": "매장 안에서 메뉴와 제품 이미지를 자연스럽게 연결해 보여주는 배너 디자인입니다.",
     "purpose": "방문 고객이 메뉴 정보를 빠르게 인지하도록 돕는 현장용 비주얼 제작",
     "point": "제품 컷, 메뉴 정보, 공간 톤을 맞춘 차분한 배치",
-    "role": "Visual design 100%"
+    "role": "Visual design 100%",
+    "hidden": true
   },
   {
     "key": "visualAi01",
