@@ -900,7 +900,7 @@ window.PORTFOLIO_WORKS = [
     "category": "홈쇼핑 라이브 · VMD",
     "title": "롯데홈쇼핑 라이브 판넬·VMD 디자인",
     "image": "assets/lotte-panels-cover.svg",
-    "alt": "덴클 롯데홈쇼핑 라이브 판넬 다섯 장 누끼 구성",
+    "alt": "덴클 롯데홈쇼핑 라이브 판넬 열두 장 누끼 구성",
     "summary": "2024년 4월 24일 롯데홈쇼핑 라이브 방송을 위해 판넬 시안을 제작했습니다. 방송 중 멀리서도 핵심 메시지가 읽히도록 정보의 크기와 대비를 설계했습니다.",
     "purpose": "혜택, 가격, 제품 특징을 방송 화면에서 즉시 읽히게 구성",
     "point": "강한 대비, 짧은 문장, 화면 노출을 고려한 글자 크기와 정보 밀도",
@@ -925,7 +925,8 @@ window.PORTFOLIO_WORKS = [
     "gallery": [
       "assets/lotte-panels-all.svg",
       "assets/lotte-vmd.png",
-      "assets/lotte-studio.png"
+      "assets/lotte-studio-wide.png",
+      "assets/lotte-studio-close.png"
     ]
   },
   {
