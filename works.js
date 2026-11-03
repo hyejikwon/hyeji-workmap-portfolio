@@ -880,7 +880,7 @@ window.PORTFOLIO_WORKS = [
     "type": "offline",
     "category": "제품 · 패키지 디자인",
     "title": "덴클 칫솔 컬러·그래픽 및 패키지 디자인",
-    "image": "assets/package-cover.svg",
+    "image": "assets/package-cover-clear.svg",
     "alt": "덴클 대용량 단상자와 개별 케이스, 칫솔 컬러·인쇄 그래픽 구성",
     "summary": "기존 그래뉼 치약의 색감과 클래식한 그래픽을 이어받아, 칫솔의 컬러·인쇄 그래픽과 개별 케이스, 대용량 단상자를 디자인했습니다. 서로 다른 형태의 제품이 함께 놓였을 때 하나의 브랜드로 보이도록 구성했습니다.",
     "contribution": "칫솔 컬러·인쇄 그래픽 / 개별 케이스·대용량 단상자 디자인 100%",
