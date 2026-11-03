@@ -897,29 +897,35 @@ window.PORTFOLIO_WORKS = [
   {
     "key": "hostPanel",
     "type": "offline",
-    "category": "홈쇼핑 판넬",
-    "title": "덴클 홈쇼핑 방송 판넬 디자인",
-    "image": "assets/host_panels.jpg",
-    "alt": "Home shopping host panels",
-    "summary": "쇼호스트가 방송 중 핵심 혜택과 제품 정보를 빠르게 전달할 수 있도록 만든 핸드 패널입니다.",
+    "category": "홈쇼핑 라이브 · VMD",
+    "title": "롯데홈쇼핑 라이브 판넬·VMD 디자인",
+    "image": "assets/lotte-panels-cover.svg",
+    "alt": "덴클 롯데홈쇼핑 라이브 판넬 다섯 장 누끼 구성",
+    "summary": "2024년 4월 24일 롯데홈쇼핑 라이브 방송을 위해 판넬 시안을 제작했습니다. 방송 중 멀리서도 핵심 메시지가 읽히도록 정보의 크기와 대비를 설계했습니다.",
     "purpose": "혜택, 가격, 제품 특징을 방송 화면에서 즉시 읽히게 구성",
     "point": "강한 대비, 짧은 문장, 화면 노출을 고려한 글자 크기와 정보 밀도",
-    "role": "Visual design 100% / text planning with MD direction",
+    "role": "판넬 시안·디자인·인쇄·제작 100% / 문구와 혜택 내용은 MD 제공",
     "hidden": false,
-    "contribution": "디자인 100% · 텍스트 기획은 MD와 협업",
+    "contribution": "판넬 시안·디자인·인쇄·제작 100% · 문구와 혜택 내용은 MD 제공",
     "notes": [
       {
-        "heading": "전달할 정보",
-        "body": "제품의 특징과 혜택을 방송 중 한눈에 읽을 수 있도록 판넬별 핵심 메시지를 구분했습니다."
+        "heading": "시청자를 위한 정보 설계",
+        "body": "30~50대 주부층을 주요 시청자로 보고, 쇼호스트의 설명 순서와 시청자의 시선을 고려해 한 판넬에 한 메시지를 담았습니다."
       },
       {
-        "heading": "화면 구성",
-        "body": "큰 글자와 명확한 대비를 사용하고, 강조할 숫자와 제품 이미지를 중심으로 정보의 순서를 정리했습니다."
+        "heading": "방송 화면의 가독성",
+        "body": "이탈리아 비건 인증, 제품 특징, 검사 수치, 구성과 혜택 등 서로 다른 내용을 빨강·초록의 대비와 큰 글자로 구분했습니다. 제품 효능 수치는 제공된 자료를 바탕으로 배치했습니다."
       },
       {
-        "heading": "제작 범위",
-        "body": "MD와 협의한 텍스트를 바탕으로 판넬의 레이아웃과 시각 디자인을 제작했습니다."
+        "heading": "연간 운영 경험",
+        "body": "덴클 재직 당시 연간 10회 이상 홈쇼핑 방송 관련 시각물 제작에 참여했습니다."
       }
+    ],
+    "periodLabel": "2024.04.24 · 롯데홈쇼핑 라이브",
+    "gallery": [
+      "assets/lotte-panels-all.svg",
+      "assets/lotte-vmd.png",
+      "assets/lotte-studio.png"
     ]
   },
   {
